@@ -103,15 +103,26 @@ class DebugTest {
     }
 
     @isTest
+    static void getLineNumberTest()
+    {
+        /* lineNumberStr need be the line where the method 'Debug.getInstance().getLineNumber()' is called. */
+        String lineNumberStr = '110'; 
+        String lineNumber = Debug.getInstance().getLineNumber();
+        System.assert(lineNumberStr.equals(lineNumber));
+    }
+
+    @isTest 
     static void getMessageTest()
     {
         String className = 'className';
         String methodName = 'methodName';
+        String lineNumber = '000';
         String bodyMessage = 'bodyMessage';
         Debug debugInstance = Debug.getInstance(); 
-        String message = debugInstance.getMessage(className, methodName, bodyMessage);
+        String message = debugInstance.getMessage(className, methodName, lineNumber, bodyMessage);
         System.assert(message.contains(className));
         System.assert(message.contains(methodName));
+        System.assert(message.contains(lineNumber));
         System.assert(message.contains(bodyMessage));
     }
 
@@ -187,7 +198,7 @@ class DebugTest {
         Integer number1 = 1;
         Integer number2 = 2;
         String key = 'acc';
-        Id accountId = TestUtil.generateFakeId(Schema.Account.getSObjectType());
+        Id accountId = DebugTest.generateFakeId(Schema.Account.getSObjectType());
         Account accountRecord = new Account(Id=accountId);
         Map<Object, Object> toLogMap = new Map<Object, Object> { 1 => 2, key => accountRecord };
         String bodyMessage = Debug.getInstance().getBodyMessage(toLogMap);
@@ -200,7 +211,7 @@ class DebugTest {
     static void getKeyValueLineTest()
     {
         String key = 'key for test';
-        Id accountId = TestUtil.generateFakeId(Schema.Account.getSObjectType());
+        Id accountId = DebugTest.generateFakeId(Schema.Account.getSObjectType());
         Account accountRecord = new Account(Id=accountId);
         String sobjectName = accountRecord.getSobjectType().getDescribe().getName();
         String keyValueLine = Debug.getInstance().getKeyValueLine(key, accountRecord);
@@ -259,6 +270,21 @@ class DebugTest {
         {
             System.assert(text.length() <= Debug.GREAT_SIZE_LINE_MAX);
         }
+    }
+
+    public static Id generateFakeId(Schema.SObjectType sobj) {
+        Id fakeId = null;
+        if(sobj != null) {
+            fakeId = String.format(
+                '{0}{1}{1}{2}',
+                new String[] {
+                    sobj.getDescribe().getKeyPrefix(),
+                    '00',
+                    String.valueOf(System.now().getTime()).substring(0, 8)
+                }
+            );
+        }
+        return fakeId;
     }
 
     class DebugTestException extends Exception {}
