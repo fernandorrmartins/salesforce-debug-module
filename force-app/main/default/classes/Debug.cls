@@ -27,7 +27,11 @@ public without sharing class Debug
     @TestVisible
     private static final String CHARACTER_DOT                   = '.';
     @TestVisible
+    private static final String CHARACTER_COMMA                 = ',';
+    @TestVisible
     private static final String CHARACTER_DOUBLE_DOT            = ':';
+    @TestVisible
+    private static final String PATTERN_GET_LINE                = 'line ';
     @TestVisible
     private static final String REGEX_SPLIT_SIZE_LENGH_COMMA    = '(?<=\\G.{param1,param2})param3';
     @TestVisible
@@ -45,7 +49,7 @@ public without sharing class Debug
     @TestVisible
     private static final String MESSAGE_END_METHOD              = 'Method end...';
     @TestVisible
-    private static final String MESSAGE_BODY                    = '\nClass name: {0}\nMethod name: {1}{2}{3}';
+    private static final String MESSAGE_BODY                    = '\nClass name: {0}\nMethod name: {1}\nLine number: {2}{3}{4}';
     @TestVisible
     private static final String MESSAGE_BODY_DETAIL             = '\nDetail: ';
     @TestVisible
@@ -218,7 +222,8 @@ public without sharing class Debug
     {
         String className = this.getClassName();
         String methodName = this.getMethodName();
-        String message = this.getMessage(className, methodName, bodyMesage);
+        String lineNumber = this.getLineNumber();
+        String message = this.getMessage(className, methodName, lineNumber, bodyMesage);
         return message;
     }
 
@@ -254,21 +259,32 @@ public without sharing class Debug
     {
         String line = this.getClassMethodNameLine();
         String classPattern = Debug.PATTERN_SPLIT_CLASS_METHOD;
-        return line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringBeforeLast(Debug.CHARACTER_DOT);
+        String className = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringBeforeLast(Debug.CHARACTER_DOT);
+        return className;
     }
 
     public String getMethodName()
     {
         String line = this.getClassMethodNameLine();
-        return line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringAfterLast(Debug.CHARACTER_DOT);
+        String methodName = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringAfterLast(Debug.CHARACTER_DOT);
+        return methodName;
     }
 
-    public String getMessage(String className, String methodName, String bodyMessage)
+    public String getLineNumber()
+    {
+        String line = this.getClassMethodNameLine();
+        String lineNumber = line.substringAfter(Debug.PATTERN_GET_LINE).substringBefore(Debug.CHARACTER_COMMA);
+        return lineNumber;
+    }
+
+    public String getMessage(String className, String methodName, String lineNumber, String bodyMessage)
     {
         String message = String.format(
             Debug.MESSAGE_FORMAT,
             new String[] {
-                className, methodName,
+                className,
+                methodName,
+                lineNumber,
                 String.isNotBlank(this.informationalMessage) ? Debug.MESSAGE_BODY_DETAIL + this.informationalMessage : Debug.CHARACTER_EMPTY,
                 String.isNotBlank(bodyMessage) ? Debug.MESSAGE_BODY_MESSAGE + bodyMessage : Debug.CHARACTER_EMPTY
             }
