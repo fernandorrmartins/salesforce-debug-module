@@ -220,9 +220,10 @@ public without sharing class Debug
     @TestVisible
     private String prepareLogMessage(String bodyMesage)
     {
-        String className = this.getClassName();
-        String methodName = this.getMethodName();
-        String lineNumber = this.getLineNumber();
+        String line = this.getClassMethodNameLine();
+        String className = this.getClassName(line);
+        String methodName = this.getMethodName(line);
+        String lineNumber = this.getLineNumber(line);
         String message = this.getMessage(className, methodName, lineNumber, bodyMesage);
         return message;
     }
@@ -257,7 +258,12 @@ public without sharing class Debug
 
     public String getClassName()
     {
-        String line = this.getClassMethodNameLine();
+        return this.getClassName(this.getClassMethodNameLine());
+    }
+
+    @TestVisible
+    private String getClassName(String line)
+    {
         String classPattern = Debug.PATTERN_SPLIT_CLASS_METHOD;
         String className = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringBeforeLast(Debug.CHARACTER_DOT);
         return className;
@@ -265,14 +271,24 @@ public without sharing class Debug
 
     public String getMethodName()
     {
-        String line = this.getClassMethodNameLine();
+        return this.getMethodName(this.getClassMethodNameLine());
+    }
+
+    @TestVisible
+    private String getMethodName(String line)
+    {
         String methodName = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringAfterLast(Debug.CHARACTER_DOT);
         return methodName;
     }
 
     public String getLineNumber()
     {
-        String line = this.getClassMethodNameLine();
+        return this.getLineNumber(this.getClassMethodNameLine());
+    }
+
+    @TestVisible
+    private String getLineNumber(String line)
+    {
         String lineNumber = line.substringAfter(Debug.PATTERN_GET_LINE).substringBefore(Debug.CHARACTER_COMMA);
         return lineNumber;
     }
