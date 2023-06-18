@@ -77,8 +77,8 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 # <b id=''>3. Debug module composition</b>
 • This project contains only two classes.
 <pre>
-• Debug.cls
-• DebugTest.cls
+→ Debug.cls
+→ DebugTest.cls
 </pre>
 • The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
 • In the next content, i will show you how to use this util methods with some prints of samples.<br>
