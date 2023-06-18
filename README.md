@@ -74,13 +74,49 @@ In the end, i will talk a little about customize the logic of this methods, but 
 &emsp;![Alt text](image-12.png)
 <br>&emsp;<b>→ Explanation:</b> We can send at same time a key value map, with the exception threw to see everything easly.
 
+### Important details:
+• Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
+<br>&emsp;→ The split character simbol is: <b>a simple comma (,)</b>.
+<br>&emsp;→ The minimum and max size to break a line (a space to try to found a split character) is: <b>Min: 340 | Max: 400</b>.
+<br>&emsp;→ Default regex expression: <b>(?<=\\G.{340,400}),</b>
+
+<br>• You can use set methods to change custom settings:
+<br>&emsp;→ setMinSplitLenght
+<br>&emsp;→ setMaxSplitLenght
+<br>&emsp;→ setCharacterSplitSignal
+
+<br>• You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
+<br>&emsp;→ serializeLog
+
+<br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
+
 ## Other methods:
-&emsp;<b>→ Obs:</b> 
+### • start()
+&emsp;<b>→ Obs:</b> This method is used in the place of 'log()' method without parameters. The difference between this two methos is only a aditional message showed indicating that the method you want to analize is 'starting...'.
 <br>&emsp;<b>→ Screen shoot:
-<br>&emsp;
-&emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b>
+<br>&emsp;![Alt text](image-13.png)
+&emsp;![Alt text](image-14.png)
+<br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is starting.
+### • end()
+&emsp;<b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;![Alt text](image-15.png)
+&emsp;![Alt text](image-16.png)
+<br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is ending.
+### • setStart()
+&emsp;<b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;![Alt text](image-17.png)
+&emsp;![Alt text](image-18.png)
+&emsp;![Alt text](image-19.png)
+<br>&emsp;<b>→ Explanation:</b> Add a aditional information to a more complex log, saying the method analised is starting.
+### • setEnd()
+&emsp;<b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;![Alt text](image-20.png)
+&emsp;![Alt text](image-21.png)
+&emsp;![Alt text](image-22.png)
+<br>&emsp;<b>→ Explanation:</b> Add a aditional information to a more complex log, saying the method analised is ending.
 
 
 # Salesforce DX Project: Next Steps
