@@ -25,9 +25,9 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ![Alt text](image.png)<br>
 ![Alt text](image-1.png)<br>
 ## What happened?
-1. As the method was called from the first line, the first line was showed in the log message.<br>
-2. As the method was called from executed anonymous block (developer console), his name appeared in the log message.<br>
-3. As the method was called out of a method, nothing appeared in the method name.
+1. <b>Class name:</b> As the method was called from executed anonymous block (developer console), his name appeared in the log message.<br>
+2. <b>Method name:</b> As the method was called from the first line, the first line was showed in the log message.<br>
+3. <b>Line number:</b> As the method was called out of a method, nothing appeared in the method name.
 ## Main methods
 • log()
     Detail: This method call a debug log message to 
