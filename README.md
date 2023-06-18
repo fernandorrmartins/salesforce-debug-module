@@ -29,17 +29,17 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.<br>
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 ## Main methods
-### log()
-&emsp;<b>•Obs:</b> This method call a debug log message with basic information as showed above but we will present it called from a simple class here.<br>
-&emsp;<b>• Screen shoot:</b><br>
+### • log()
+&emsp;<b>○ Obs:</b> This method call a debug log message with basic information as showed above but we will present it called from a simple class here.<br>
+&emsp;<b>○ Screen shoot:</b><br>
 &emsp;![Alt text](image-5.png)<br>
 &emsp;![Alt text](image-6.png)<br>
 &emsp;![Alt text](image-2.png)<br>
 &emsp;In the screen shoots above we can see the key points easisly, as 'class name', 'method name', and 'line number', but it is the most simples sample here.<br>
-### log(Object key, Object value)
-### log(Exception e)
-### log(Map<Object, Object> debugMap)
-### log(Map<Object, Object> debugMap, Exception e)
+### • log(Object key, Object value)
+### • log(Exception e)
+### • log(Map<Object, Object> debugMap)
+### • log(Map<Object, Object> debugMap, Exception e)
 
 ## Other methods:
 
