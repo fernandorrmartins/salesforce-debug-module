@@ -2,12 +2,9 @@
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 
 # [Pattern] Singleton
-• This class use the sigleton pattern, where only one instance of this class is used since the start of the<br>
-context (processment) until de end of the context.<br>
-• I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and<br>
-simplify development of test class and methods.
-<br>
-So the constructor is private:<br>
+• This class use the sigleton pattern, where only one instance of this class is used since the start of the context (processment) until de end of the context.<br>
+• I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and simplify development of test class and methods.<br>
+## So the constructor is private:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
 The class has only one Debug type variable <b>'INSTANCE'</b>:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/2d71e8b2-2074-4850-af98-361b8145ec78)<br>
