@@ -1,15 +1,6 @@
 # [Salesforce] Debug Module
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
-<br>
-# This project contains only two classes:<br>
-• Debug.cls<br>
-• DebugTest.cls<br>
-<br>
-The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
-<br>
-In the next content, i will show you how to use this util methods with some prints of samples.<br>
-In the end, i will talk a listtle about customize the logic of this methods, but it probably will be very rare to use.<br>
-<br>
+
 # [Pattern] Singleton
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the<br>
 context (processment) until de end of the context.<br>
@@ -25,6 +16,14 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
+# This project contains only two classes:<br>
+• Debug.cls<br>
+• DebugTest.cls<br>
+<br>
+The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
+<br>
+In the next content, i will show you how to use this util methods with some prints of samples.<br>
+In the end, i will talk a listtle about customize the logic of this methods, but it probably will be very rare to use.<br>
 
 # Salesforce DX Project: Next Steps
 
