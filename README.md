@@ -150,12 +150,12 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Default regex expression:</b> <pre>(?<=\\G.{340,400}),</pre>
 
 <br>• You can use set methods to change custom settings:
-<br>&emsp;→ setMinSplitLenght
-<br>&emsp;→ setMaxSplitLenght
-<br>&emsp;→ setCharacterSplitSignal
+<br>&emsp;<b>→ setMinSplitLenght</b>
+<br>&emsp;<b>→ setMaxSplitLenght</b>
+<br>&emsp;<b>→ setCharacterSplitSignal</b>
 
 <br>• You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
-<br>&emsp;→ serializeLog
+<br>&emsp;<b>→ serializeLog</b>
 
 <br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
 
