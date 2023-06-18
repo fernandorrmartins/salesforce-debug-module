@@ -175,12 +175,9 @@ In the end, i will talk a little about customize the logic of this methods, but 
 </pre>
 
 • You can use set methods to change custom settings:<br>
-<h4>
-Warning:
 ```diff
--Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.
+- Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.
 ```
-</h4>
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
