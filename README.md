@@ -14,13 +14,13 @@
     </li>
     <li>
         <a href=''>Methods</a>
-        <ol>
+        <ol start="1.1">
             <li>
                 <a href=''>What happen as result</a>
             </li>
             <li>
                 <a href=''>Main methods</a>
-                <ol>
+                <ol start="1.1.1">
                     <li>
                         <a href=''>log()</a>
                     </li>
@@ -43,7 +43,7 @@
             </li>
             <li>
                 <a href=''>Other methods</a>
-                <ol>
+                <ol start="1.1.1">
                     <li>
                         <a href=''>start()</a>
                     </li>
