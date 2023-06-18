@@ -1,6 +1,6 @@
 # Summary
-<ol style="counter-reset: item;">
-    <lis style="display: block;">
+<ol>
+    <lis>
         <a href='about'>Debug Module</a>
     </li>
     <li>
