@@ -22,8 +22,8 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 # Methods
 • The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
-![Alt text](image.png)<br>
-![Alt text](image-1.png)<br>
+![Alt text](image.png)
+![Alt text](image-1.png)
 ## What happened?
 <b>1. Class name:</b> As the method was called from executed anonymous block (developer console), its name appeared in the log message.<br>
 <b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.<br>
