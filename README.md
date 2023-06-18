@@ -80,9 +80,9 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 • Debug.cls
 • DebugTest.cls
 </pre>
-The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
-In the next content, i will show you how to use this util methods with some prints of samples.<br>
-In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
+• The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
+• In the next content, i will show you how to use this util methods with some prints of samples.<br>
+• In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
 # <b id=''>4. Methods</b>
 • The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
