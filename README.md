@@ -1,4 +1,18 @@
-# [Salesforce] Debug Module
+# Summary
+<ol>
+    <li>
+        <a href='about'>1. Debug Module</a><br>
+    </li>
+    <li>
+        <a href='pattern'>2. Singleton Pattern</a><br>
+        <li>
+            <a href='pattern'>2.2 Private constructor</a><br>
+        </li>
+    </li>
+        <a href='about'>2. Singleton Pattern</a><br>
+</ol>
+
+# 1. [Salesforce] Debug Module
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 
 # [Pattern] Singleton
