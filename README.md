@@ -174,7 +174,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>→ Default regex expression:</b> (?<=\\G.{340,400}),
 </pre>
 
-• You can use set methods to change custom settings:<br>
+### You can use set methods to change custom settings:<br>
 <h4>Warning:</h4>
 
 ```diff
