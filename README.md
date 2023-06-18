@@ -21,7 +21,7 @@ In the next content, i will show you how to use this util methods with some prin
 In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
 # Methods
-• The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', and in what line the debug log method was called.<br>
+• The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
 ![Alt text](image.png)<br>
 ![Alt text](image-1.png)<br>
 ## What happened?
