@@ -1,16 +1,4 @@
 # Summary
-<style>
-    ol {
-        counter-reset: item
-    }
-    li {
-        display: block
-    }
-    li:before {
-        content: counters(item, ".") " ";
-        counter-increment: item
-    }
-</style>
 <ol style="counter-reset: item;">
     <lis style="display: block;">
         <a href='about'>Debug Module</a>
