@@ -31,7 +31,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ## Main methods
 ### • log()
 &emsp;<b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-5.png)
 &emsp;![Alt text](image-6.png)
 &emsp;![Alt text](image-2.png)
@@ -41,7 +41,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ### • log(Object key, Object value)
 &emsp;<b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
 <br>&emsp;<b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-3.png)
 &emsp;![Alt text](image-4.png)
 <br>&emsp;<b>→ Explanation:</b>
@@ -51,7 +51,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 ### • log(Exception e)
 &emsp;<b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-7.png)
 &emsp;![Alt text](image-8.png)
 <br>&emsp;<b>→ Explanation:</b>
@@ -61,7 +61,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 ### • log(Map<Object, Object> debugMap)
 &emsp;<b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-9.png)
 &emsp;![Alt text](image-10.png)
 <br>&emsp;<b>→ Explanation:</b> Every '• key → value' use a different line to be displayed.
@@ -69,7 +69,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 ### • log(Map<Object, Object> debugMap, Exception e)
 &emsp;<b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-11.png)
 &emsp;![Alt text](image-12.png)
 <br>&emsp;<b>→ Explanation:</b> We can send at same time a key value map, with the exception threw to see everything easly.
@@ -94,21 +94,21 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ## Other methods:
 ### • start()
 &emsp;<b>→ Obs:</b> This method is used in the place of 'log()' method without parameters. The difference between this two methos is only a aditional message showed indicating that the method you want to analize is 'starting...'.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-13.png)
 &emsp;![Alt text](image-14.png)
 <br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is starting.
 <hr>
 ### • end()
 &emsp;<b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-15.png)
 &emsp;![Alt text](image-16.png)
 <br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is ending.
 <hr>
 ### • setStart()
 &emsp;<b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-17.png)
 &emsp;![Alt text](image-18.png)
 &emsp;![Alt text](image-19.png)
@@ -116,7 +116,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <hr>
 ### • setEnd()
 &emsp;<b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
-<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;<b>[Screen shoot]</b>
 <br>&emsp;![Alt text](image-20.png)
 &emsp;![Alt text](image-21.png)
 &emsp;![Alt text](image-22.png)
