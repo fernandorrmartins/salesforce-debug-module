@@ -7,64 +7,83 @@
         <a href='pattern'>Singleton Pattern</a>
     </li>
     <li>
+        <li>
+            <a href=''>Other methods</a>
+            <ol>
+                <li>
+                    <a href=''>start()</a>
+                </li>
+                <li>
+                    <a href=''>end()</a>
+                </li>
+                <li>
+                    <a href=''>setStart()</a>
+                </li>
+                <li>
+                    <a href=''>setEnd()</a>
+                </li>
+            </ul>
+        </li>
+    <li>
         <a href=''>Debug module composition</a>
     </li>
     <li>
         <a href=''>Methods</a>
-        <ul>
+    </li>
+    <ol>
+        <li>
+            <a href=''>What happen as result</a>
+        </li>
+        <li>
+            <a href=''>Main methods</a>
+        </li>
+        <ol>
             <li>
-                <a href=''>What happen as result</a>
+                <a href=''>log()</a>
             </li>
             <li>
-                <a href=''>Main methods</a>
-                <ul>
-                    <li>
-                        <a href=''>log()</a>
-                    </li>
-                    <li>
-                        <a href=''>log(Object key, Object value)</a>
-                    </li>
-                    <li>
-                        <a href=''>log(Exception e)</a>
-                    </li>
-                    <li>
-                        <a href=''>log(Map<Object, Object> debugMap)</a>
-                    </li>
-                    <li>
-                        <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href=''>Important details</a>
-                </li>
-                <li>
-                    <a href=''>Other methods</a>
-                    <ul>
-                        <li>
-                            <a href=''>start()</a>
-                        </li>
-                        <li>
-                            <a href=''>end()</a>
-                        </li>
-                        <li>
-                            <a href=''>setStart()</a>
-                        </li>
-                        <li>
-                            <a href=''>setEnd()</a>
-                        </li>
-                    </ul>
-                </li>
+                <a href=''>log(Object key, Object value)</a>
+            </li>
+            <li>
+                <a href=''>log(Exception e)</a>
+            </li>
+            <li>
+                <a href=''>log(Map<Object, Object> debugMap)</a>
+            </li>
+            <li>
+                <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
             </li>
         </ul>
-    </li>
+        <li>
+            <a href=''>Important details</a>
+        </li>
+        <li>
+            <a href=''>Other methods</a>
+        </li>
+        <ol>
+            <li>
+                <a href=''>start()</a>
+            </li>
+            <li>
+                <a href=''>end()</a>
+            </li>
+            <li>
+                <a href=''>setStart()</a>
+            </li>
+            <li>
+                <a href=''>setEnd()</a>
+            </li>
+        </ul>
+    </ul>
 </ol>
 
-# 1. [Salesforce] Debug Module
+# <b id=''>1. [Salesforce] Debug Module</b>
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 
-# 2. [Pattern] Singleton
+# <b id=''>2. [Pattern] Singleton
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the context (processment) until de end of the context.<br>
 • I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and simplify development of test class and methods.<br>
+
 ### So the constructor is private:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
 The class has only one Debug type variable <b>'INSTANCE'</b>:<br>
@@ -73,7 +92,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
-# 3. This project contains only two classes:<br>
+# <b id=''>3. This project contains only two classes:<br>
 • Debug.cls<br>
 • DebugTest.cls<br>
 <br>
@@ -81,16 +100,18 @@ The main class is Debug, wich have some util methods to help developer debug and
 In the next content, i will show you how to use this util methods with some prints of samples.<br>
 In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
-# 4. Methods
+# <b id=''>4. Methods
 • The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
 ![Alt text](image.png)
 ![Alt text](image-1.png)
-## What happened?
+<b id=''>## What happened?
 <b>1. Class name:</b> As the method was called from executed anonymous block (developer console), its name appeared in the log message.<br>
 <b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.<br>
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
-## Main methods
-### • log()
+
+## <b id=''>Main methods
+
+### <b id=''>• log()
 &emsp;<b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
 <br>&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-5.png)
