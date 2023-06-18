@@ -9,56 +9,42 @@
     <li>
         <a href=''>Other methods</a>
     </li>
-    <ol>
-        <li>
-            <a href=''>start()</a>
-        </li>
-        <li>
-            <a href=''>end()</a>
-        </li>
-        <li>
-            <a href=''>setStart()</a>
-        </li>
-        <li>
-            <a href=''>setEnd()</a>
-        </li>
-    </ol>
     <li>
         <a href=''>Debug module composition</a>
     </li>
     <li>
         <a href=''>Methods</a>
-    </li>
-    <ol>
-        <li>
-            <a href=''>What happen as result</a>
-        </li>
-        <li>
-            <a href=''>Main methods</a>
-        </li>
         <ol>
             <li>
-                <a href=''>log()</a>
+                <a href=''>What happen as result</a>
             </li>
             <li>
-                <a href=''>log(Object key, Object value)</a>
+                <a href=''>Main methods</a>
             </li>
-            <li>
-                <a href=''>log(Exception e)</a>
-            </li>
-            <li>
-                <a href=''>log(Map<Object, Object> debugMap)</a>
-            </li>
-            <li>
-                <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
-            </li>
+            <ol>
+                <li>
+                    <a href=''>log()</a>
+                </li>
+                <li>
+                    <a href=''>log(Object key, Object value)</a>
+                </li>
+                <li>
+                    <a href=''>log(Exception e)</a>
+                </li>
+                <li>
+                    <a href=''>log(Map<Object, Object> debugMap)</a>
+                </li>
+                <li>
+                    <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
+                </li>
+            </ol>
         </ol>
-        <li>
-            <a href=''>Important details</a>
-        </li>
-        <li>
-            <a href=''>Other methods</a>
-        </li>
+    </li>
+    <li>
+        <a href=''>Important details</a>
+    </li>
+    <li>
+        <a href=''>Other methods</a>
         <ol>
             <li>
                 <a href=''>start()</a>
@@ -73,7 +59,7 @@
                 <a href=''>setEnd()</a>
             </li>
         </ol>
-    </ol>
+    </li>
 </ol>
 
 # <b id=''>1. [Salesforce] Debug Module</b>
