@@ -82,7 +82,6 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 • Debug.cls
 • DebugTest.cls
 </pre>
-<br>
 The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
 In the next content, i will show you how to use this util methods with some prints of samples.<br>
 In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
