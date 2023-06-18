@@ -20,43 +20,43 @@
             </li>
             <li>
                 <a href=''>Main methods</a>
-            </li>
-            <ol>
-                <li>
-                    <a href=''>log()</a>
-                </li>
-                <li>
-                    <a href=''>log(Object key, Object value)</a>
-                </li>
-                <li>
-                    <a href=''>log(Exception e)</a>
-                </li>
-                <li>
-                    <a href=''>log(Map<Object, Object> debugMap)</a>
-                </li>
-                <li>
-                    <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
-                </li>
-            </ol>
-        </ol>
-    </li>
-    <li>
-        <a href=''>Important details</a>
-    </li>
-    <li>
-        <a href=''>Other methods</a>
-        <ol>
-            <li>
-                <a href=''>start()</a>
+                <ol>
+                    <li>
+                        <a href=''>log()</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Object key, Object value)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Exception e)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Map<Object, Object> debugMap)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
+                    </li>
+                </ol>
             </li>
             <li>
-                <a href=''>end()</a>
+                <a href=''>Important details</a>
             </li>
             <li>
-                <a href=''>setStart()</a>
-            </li>
-            <li>
-                <a href=''>setEnd()</a>
+                <a href=''>Other methods</a>
+                <ol>
+                    <li>
+                        <a href=''>start()</a>
+                    </li>
+                    <li>
+                        <a href=''>end()</a>
+                    </li>
+                    <li>
+                        <a href=''>setStart()</a>
+                    </li>
+                    <li>
+                        <a href=''>setEnd()</a>
+                    </li>
+                </ol>
             </li>
         </ol>
     </li>
