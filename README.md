@@ -26,8 +26,8 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ![Alt text](image-1.png)<br>
 ## What happened?
 <b>1. Class name:</b> As the method was called from executed anonymous block (developer console), its name appeared in the log message.<br>
-<b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.
-<b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.<br>
+<b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.<br>
+<b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 ## Main methods
 <b>• log()</b><br>
     <b>Obs:</b> This method call a debug log message to .<br>
