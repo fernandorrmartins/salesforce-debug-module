@@ -89,16 +89,16 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 
-## <b id=''>What happened?</b>
+## <b id=''>I. What happened?</b>
 <pre>
 <b>1. Class name:</b> As the method was called from executed anonymous block (developer console), its name appeared in the log message.
 <b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 </pre>
 
-## <b id=''>Main methods</b>
+## <b id=''>II. Main methods</b>
 
-### <b id=''>• log()</b>
+### <b id=''>a. log()</b>
 <pre>
 <b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
 </pre>
@@ -111,7 +111,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• log(Object key, Object value)</b>
+### <b id=''>b. log(Object key, Object value)</b>
 <pre>
 <b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
 <b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
@@ -126,7 +126,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• log(Exception e)</b>
+### <b id=''>c. log(Exception e)</b>
 <pre>
 <b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
 </pre>
@@ -140,7 +140,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• log(Map<Object, Object> debugMap)</b>
+### <b id=''>d. log(Map<Object, Object> debugMap)</b>
 <pre>
 <b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
 </pre>
@@ -152,7 +152,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• log(Map<Object, Object> debugMap, Exception e)</b>
+### <b id=''>e. log(Map<Object, Object> debugMap, Exception e)</b>
 <pre>
 <b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
 </pre>
@@ -164,7 +164,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-## <b id=''>Important details</b>
+## <b id=''>III. Important details</b>
 • Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
 <pre>
 <b>→ The split character simbol:</b> A comma (,)
@@ -193,9 +193,9 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 
 <br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
 
-## <b id=''>Other methods</b>
+## <b id=''>IV. Other methods</b>
 
-### <b id=''>• start()</b>
+### <b id=''>a. start()</b>
 <pre>
 <b>→ Obs:</b> This method is used in the place of 'log()' method without parameters. The difference between this two methos is only a aditional message showed indicating that the method you want to analize is 'starting...'.
 </pre>
@@ -207,7 +207,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• end()</b>
+### <b id=''>b. end()</b>
 <pre>
 <b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
 </pre>
@@ -219,7 +219,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• setStart()</b>
+### <b id=''>c. setStart()</b>
 <pre>
 <b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
 </pre>
@@ -232,7 +232,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>• setEnd()</b>
+### <b id=''>d. setEnd()</b>
 <pre>
 <b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
 </pre>
