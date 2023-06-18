@@ -175,12 +175,13 @@ In the end, i will talk a little about customize the logic of this methods, but 
 </pre>
 
 • You can use set methods to change custom settings:
+<code>
+    <b style="color:orange;">Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
+</code>
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
 <b>→ setCharacterSplitSignal</b>
-
-<b style="color:orange;">Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
 </pre>
 
 • You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
