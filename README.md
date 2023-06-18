@@ -169,8 +169,8 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ## <b id=''>Important details</b>
 • Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
 <pre>
-<b>→ The split character simbol is:</b> a simple comma (,)
-<b>→ The minimum and max size to break a line (a space to try to found a split character) is:</b> Min: 340 | Max: 400
+<b>→ The split character simbol:</b> A comma (,)
+<b>→ The minimum and max size to break a line (a space to try to find a split character):</b> Min: 340 | Max: 400
 <b>→ Default regex expression:</b> (?<=\\G.{340,400}),
 </pre>
 
