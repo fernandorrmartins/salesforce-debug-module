@@ -1,25 +1,66 @@
 # Summary
 <ol>
     <li>
-        <a href='about'>Debug Module</a><br>
+        <a href='about'>Debug Module</a>
     </li>
     <li>
-        <a href='pattern'>Singleton Pattern</a><br>
-        <ul start='1'>
+        <a href='pattern'>Singleton Pattern</a>
+    </li>
+    <li>
+        <a href=''>Debug module composition</a>
+    </li>
+    <li>
+        <a href=''>Methods</a>
+        <ul>
             <li>
-                <a href='pattern'>Private constructor</a><br>
+                <a href=''>What happen as result</a>
+            </li>
+            <li>
+                <a href=''>Main methods</a>
+                <ul>
+                    <li>
+                        <a href=''>log()</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Object key, Object value)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Exception e)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Map<Object, Object> debugMap)</a>
+                    </li>
+                    <li>
+                        <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href=''>Important details</a>
+                    <a href=''>Other methods</a>
+                    <ul>
+                        <li>
+                            <a href=''>start()</a>
+                        </li>
+                        <li>
+                            <a href=''>end()</a>
+                        </li>
+                        <li>
+                            <a href=''>setStart()</a>
+                        </li>
+                        <li>
+                            <a href=''>setEnd()</a>
+                        </li>
+                    </ul>
+                </li>
             </li>
         </ul>
-    </li>
-    <li>
-        <a href='about'>Singleton Pattern</a><br>
     </li>
 </ol>
 
 # 1. [Salesforce] Debug Module
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 
-# [Pattern] Singleton
+# 2. [Pattern] Singleton
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the context (processment) until de end of the context.<br>
 • I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and simplify development of test class and methods.<br>
 ## So the constructor is private:<br>
@@ -30,7 +71,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
-# This project contains only two classes:<br>
+# 3. This project contains only two classes:<br>
 • Debug.cls<br>
 • DebugTest.cls<br>
 <br>
@@ -38,7 +79,7 @@ The main class is Debug, wich have some util methods to help developer debug and
 In the next content, i will show you how to use this util methods with some prints of samples.<br>
 In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
-# Methods
+# 4. Methods
 • The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
 ![Alt text](image.png)
 ![Alt text](image-1.png)
@@ -93,7 +134,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Explanation:</b> We can send at same time a key value map, with the exception threw to see everything easly.
 <hr>
 
-### Important details:
+## Important details:
 • Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
 <br>&emsp;→ The split character simbol is: <b>a simple comma (,)</b>.
 <br>&emsp;→ The minimum and max size to break a line (a space to try to found a split character) is: <b>Min: 340 | Max: 400</b>.
