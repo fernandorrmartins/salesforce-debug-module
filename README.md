@@ -1,26 +1,23 @@
 # Summary
 <ol>
     <li>
-        <a href='about'>Debug Module</a>
+        <a href='#about'>Debug Module</a>
     </li>
     <li>
-        <a href='pattern'>Singleton Pattern</a>
+        <a href='#pattern'>Singleton Pattern</a>
     </li>
     <li>
-        <a href=''>Other methods</a>
+        <a href='#composition'>Debug module composition</a>
     </li>
     <li>
-        <a href=''>Debug module composition</a>
-    </li>
-    <li style="display: block;">
-        <a href=''>Methods</a>
-        <ol style="counter-reset: item;" start="1.1">
+        <a href='#methods'>Methods</a>
+        <ol>
             <li>
                 <a href=''>What happen as result</a>
             </li>
             <li>
                 <a href=''>Main methods</a>
-                <ol start="1.1.1">
+                <ol>
                     <li>
                         <a href=''>log()</a>
                     </li>
@@ -43,7 +40,7 @@
             </li>
             <li>
                 <a href=''>Other methods</a>
-                <ol start="1.1.1">
+                <ol>
                     <li>
                         <a href=''>start()</a>
                     </li>
