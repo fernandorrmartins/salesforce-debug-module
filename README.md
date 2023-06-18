@@ -79,8 +79,8 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 
 # <b id=''>3. This project contains only two classes:</b>
 <pre>
-    &emsp;• Debug.cls<br>
-    &emsp;• DebugTest.cls<br>
+    • Debug.cls
+    • DebugTest.cls
 </pre>
 <br>
 The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
@@ -103,21 +103,21 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 ### <b id=''>• log()</b>
 <pre>
-    &emsp;<b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
+    <b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
 </pre>
 <br>&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-5.png)
 &emsp;![Alt text](image-6.png)
 &emsp;![Alt text](image-2.png)
 <pre>
-    &emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easily, as 'class name', 'method name', and 'line number', but it is the most simple sample here.
+    <b>→ Explanation:</b> In the screen shoots above we can see the key points easily, as 'class name', 'method name', and 'line number', but it is the most simple sample here.
 </pre>
 <hr></hr>
 
 ### <b id=''>• log(Object key, Object value)</b>
 <pre>
-    &emsp;<b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
-    <br>&emsp;<b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
+    <b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
+    <b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
 </pre>
 <br>&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-3.png)
