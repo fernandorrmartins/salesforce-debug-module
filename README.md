@@ -1,6 +1,6 @@
 # Summary
 <ol>
-    <lis>
+    <li>
         <a href='about'>Debug Module</a>
     </li>
     <li>
@@ -12,7 +12,7 @@
     <li>
         <a href=''>Debug module composition</a>
     </li>
-    <lis style="display: block;">
+    <li style="display: block;">
         <a href=''>Methods</a>
         <ol style="counter-reset: item;">
             <li>
