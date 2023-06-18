@@ -1,8 +1,5 @@
-# 0. Summary
-<ol start="0">
-    <li>
-        <a href='#about'>Summary</a>
-    </li>
+# Summary
+<ol start="1">
     <li>
         <a href='#about'>Debug Module</a>
     </li>
