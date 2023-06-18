@@ -175,9 +175,9 @@ In the end, i will talk a little about customize the logic of this methods, but 
 </pre>
 
 • You can use set methods to change custom settings:<br>
-<pre style="color: red;">
-    &#x1F34E;<b>Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
-</pre>
+```diff
+-<b>Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
+```
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
