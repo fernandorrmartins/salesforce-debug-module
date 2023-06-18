@@ -24,12 +24,12 @@ In the next content, i will show you how to use this util methods with some prin
 In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
 # Methods
-• The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', and in what line
-the debug log method was called.
-![Alt text](image.png)
-![Alt text](image-1.png)
-1. As the method was called from the first line, the first line was showed in the log message.
-2. As the method was called from executed anonymous block (developer console), his name appeared in the log message.
+• The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', and in what line<br>
+the debug log method was called.<br>
+![Alt text](image.png)<br>
+![Alt text](image-1.png)<br>
+1. As the method was called from the first line, the first line was showed in the log message.<br>
+2. As the method was called from executed anonymous block (developer console), his name appeared in the log message.<br>
 3. As the method was called out of a method, nothing appeared in the method name.
 ## Main methods
 • log()
