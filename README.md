@@ -104,7 +104,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-5.png)
 &emsp;![Alt text](image-6.png)
 &emsp;![Alt text](image-2.png)
@@ -118,7 +118,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
 <b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-3.png)
 &emsp;![Alt text](image-4.png)
 <pre>
@@ -132,7 +132,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-7.png)
 &emsp;![Alt text](image-8.png)
 <pre>
@@ -145,8 +145,8 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ### <b id=''>• log(Map<Object, Object> debugMap)</b>
 <pre>
 <b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
-</pre>  
-<br>&emsp;<b>[Screen shoots]</b>
+</pre>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-9.png)
 &emsp;![Alt text](image-10.png)
 <pre>
@@ -158,7 +158,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-11.png)
 &emsp;![Alt text](image-12.png)
 <pre>
@@ -174,14 +174,14 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>→ Default regex expression:</b> <pre>(?<=\\G.{340,400}),
 </pre>
 
-<br>• You can use set methods to change custom settings:
+• You can use set methods to change custom settings:
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
 <b>→ setCharacterSplitSignal</b>
 </pre>
 
-<br>• You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
+• You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
 <pre>
 <b>→ serializeLog</b>
 </pre>
@@ -194,7 +194,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> This method is used in the place of 'log()' method without parameters. The difference between this two methos is only a aditional message showed indicating that the method you want to analize is 'starting...'.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-13.png)
 &emsp;![Alt text](image-14.png)
 <pre>
@@ -206,7 +206,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-15.png)
 &emsp;![Alt text](image-16.png)
 <pre>
@@ -218,7 +218,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-17.png)
 &emsp;![Alt text](image-18.png)
 &emsp;![Alt text](image-19.png)
@@ -231,7 +231,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <pre>
 <b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
 </pre>
-<br>&emsp;<b>[Screen shoots]</b>
+&emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-20.png)
 &emsp;![Alt text](image-21.png)
 &emsp;![Alt text](image-22.png)
