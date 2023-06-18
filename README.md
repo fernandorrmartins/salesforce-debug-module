@@ -74,7 +74,8 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
-# <b id=''>3. This project contains only two classes:</b>
+# <b id=''>3. Debug module composition</b>
+• This project contains only two classes.
 <pre>
 • Debug.cls
 • DebugTest.cls
