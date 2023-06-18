@@ -17,9 +17,9 @@ context (processment) until de end of the context.<br>
 So the constructor is private:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
 <br>
-The class has only one Debug type variable 'INSTANCE':<br>
+The class has only one Debug type variable <b>'INSTANCE'</b>:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/2d71e8b2-2074-4850-af98-361b8145ec78)<br>
-That will be used for call the methods with the follow 'getInstance':<br>
+That will be used for call the methods with the follow <b>'getInstance'</b> method:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
