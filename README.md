@@ -11,8 +11,8 @@
         counter-increment: item
     }
 </style>
-<ol>
-    <li>
+<ol style="counter-reset: item;">
+    <lis style="display: block;">
         <a href='about'>Debug Module</a>
     </li>
     <li>
@@ -24,9 +24,9 @@
     <li>
         <a href=''>Debug module composition</a>
     </li>
-    <li>
+    <lis style="display: block;">
         <a href=''>Methods</a>
-        <ol start="1.1">
+        <ol style="counter-reset: item;">
             <li>
                 <a href=''>What happen as result</a>
             </li>
