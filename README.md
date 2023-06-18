@@ -1,7 +1,7 @@
 # [Salesforce] Debug Module
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 <br>
-#This project contains only two classes:<br>
+# This project contains only two classes:<br>
 • Debug.cls<br>
 • DebugTest.cls<br>
 <br>
@@ -10,9 +10,11 @@ The main class is Debug, wich have some util methods to help developer debug and
 In the next content, i will show you how to use this util methods with some prints of samples.<br>
 In the end, i will talk a listtle about customize the logic of this methods, but it probably will be very rare to use.<br>
 <br>
-# [Pattern]<br>
+# [Pattern] Singleton
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the<br>
 context (processment) until de end of the context.<br>
+• I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and<br>
+simplify development of test class and methods.
 <br>
 So the constructor is private:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
