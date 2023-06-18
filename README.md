@@ -46,26 +46,25 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;1. The 'key' value is presented as an key in the message to identify the value you want to see.
 <br>&emsp;2. The 'value' is presented to visualize what is saved inside the variable.
 ### • log(Exception e)
-&emsp;<b>→ Obs:</b> 
+&emsp;<b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
 <br>&emsp;<b>→ Screen shoot:
-<br>&emsp;
-&emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b> 
+<br>&emsp;![Alt text](image-7.png)
+&emsp;![Alt text](image-8.png)
+<br>&emsp;<b>→ Explanation:</b>
+<br>&emsp;1. In the message section, a nem section called 'Exception Data' is created, displaying what is important.
+<br>&emsp;2. With this we can implement exception log as simple, clear and fast as possible.
 ### • log(Map<Object, Object> debugMap)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;
 &emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b> 
+<br>&emsp;<b>→ Explanation:</b>
 ### • log(Map<Object, Object> debugMap, Exception e)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;
 &emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b> 
+<br>&emsp;<b>→ Explanation:</b>
 
 ## Other methods:
 &emsp;<b>→ Obs:</b> 
@@ -73,7 +72,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;
 &emsp;
 &emsp;
-<br>&emsp;<b>→ Explanation:</b> 
+<br>&emsp;<b>→ Explanation:</b>
 
 
 # Salesforce DX Project: Next Steps
