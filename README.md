@@ -64,7 +64,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;![Alt text](image-9.png)
 &emsp;![Alt text](image-10.png)
-<br>&emsp;<b>→ Explanation:</b> Every '• key → value' use a different line to be displayed. 
+<br>&emsp;<b>→ Explanation:</b> Every '• key → value' use a different line to be displayed.
 <hr>
 
 ### • log(Map<Object, Object> debugMap, Exception e)
@@ -73,6 +73,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;![Alt text](image-11.png)
 &emsp;![Alt text](image-12.png)
 <br>&emsp;<b>→ Explanation:</b> We can send at same time a key value map, with the exception threw to see everything easly.
+<hr>
 
 ### Important details:
 • Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
@@ -97,12 +98,14 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;![Alt text](image-13.png)
 &emsp;![Alt text](image-14.png)
 <br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is starting.
+<hr>
 ### • end()
 &emsp;<b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;![Alt text](image-15.png)
 &emsp;![Alt text](image-16.png)
 <br>&emsp;<b>→ Explanation:</b> Add a aditional information saying the method analised is ending.
+<hr>
 ### • setStart()
 &emsp;<b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
 <br>&emsp;<b>→ Screen shoot:
@@ -110,6 +113,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 &emsp;![Alt text](image-18.png)
 &emsp;![Alt text](image-19.png)
 <br>&emsp;<b>→ Explanation:</b> Add a aditional information to a more complex log, saying the method analised is starting.
+<hr>
 ### • setEnd()
 &emsp;<b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
 <br>&emsp;<b>→ Screen shoot:
