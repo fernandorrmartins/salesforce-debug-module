@@ -36,6 +36,8 @@
                 </ul>
                 <li>
                     <a href=''>Important details</a>
+                </li>
+                <li>
                     <a href=''>Other methods</a>
                     <ul>
                         <li>
