@@ -35,7 +35,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;![Alt text](image-5.png)
 &emsp;![Alt text](image-6.png)
 &emsp;![Alt text](image-2.png)
-<br>&emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easisly, as 'class name', 'method name', and 'line number', but it is the most simple sample here.<br>
+<br>&emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easily, as 'class name', 'method name', and 'line number', but it is the most simple sample here.<br>
 ### • log(Object key, Object value)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
