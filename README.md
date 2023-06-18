@@ -42,7 +42,9 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;![Alt text](image-3.png)
 &emsp;![Alt text](image-4.png)
-<br>&emsp;<b>→ Explanation:</b> 
+<br>&emsp;<b>→ Explanation:<br>
+<br>&emsp;</b>The 'key' value is presented as an key in the message to identify the value you want to see.<br>
+<br>&emsp;</b>The 'value' is presented to visualize what is saved inside the variable.
 ### • log(Exception e)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
