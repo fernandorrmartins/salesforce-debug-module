@@ -30,18 +30,48 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 ## Main methods
 ### • log()
-&emsp;<b>→ Obs:</b> This method call a debug log message with basic information as showed above but we will present it called from a simple class here.<br>
-&emsp;<b>→ Screen shoot:</b><br>
-&emsp;![Alt text](image-5.png)<br>
-&emsp;![Alt text](image-6.png)<br>
-&emsp;![Alt text](image-2.png)<br>
-&emsp;In the screen shoots above we can see the key points easisly, as 'class name', 'method name', and 'line number', but it is the most simples sample here.<br>
+&emsp;<b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
+<br>&emsp;<b>→ Screen shoot:</b>
+<br>&emsp;![Alt text](image-5.png)
+<br>&emsp;![Alt text](image-6.png)
+<br>&emsp;![Alt text](image-2.png)
+<br>&emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easisly, as 'class name', 'method name', and 'line number', but it is the most simple sample here.<br>
 ### • log(Object key, Object value)
+&emsp;<b>→ Obs:</b> 
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;<b>→ Explanation:</b> 
 ### • log(Exception e)
+&emsp;<b>→ Obs:</b> 
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;<b>→ Explanation:</b> 
 ### • log(Map<Object, Object> debugMap)
+&emsp;<b>→ Obs:</b> 
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;<b>→ Explanation:</b> 
 ### • log(Map<Object, Object> debugMap, Exception e)
+&emsp;<b>→ Obs:</b> 
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;<b>→ Explanation:</b> 
 
 ## Other methods:
+&emsp;<b>→ Obs:</b> 
+<br>&emsp;<b>→ Screen shoot:
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;
+<br>&emsp;<b>→ Explanation:</b> 
 
 
 # Salesforce DX Project: Next Steps
