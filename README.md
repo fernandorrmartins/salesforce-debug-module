@@ -5,11 +5,11 @@
     </li>
     <li>
         <a href='pattern'>Singleton Pattern</a><br>
-        <ol start='1'>
+        <ul start='1'>
             <li>
                 <a href='pattern'>Private constructor</a><br>
             </li>
-        </ol>
+        </ul>
     </li>
     <li>
         <a href='about'>Singleton Pattern</a><br>
