@@ -42,6 +42,22 @@
             </li>
             <li>
                 <a href='#important-details'>Important details</a>
+                <ol>
+                    <li>
+                        <a href='#setting-tip'>You can use set methods to change custom settings:</a>
+                        <ol>
+                            <li>
+                                <a href='#customize-settings'>Customize settings</a>
+                            </li>
+                            <li>
+                                <a href='#serialize-values'>Serialize values</a>
+                            </li>
+                            <li>
+                                <a href='#flow-settings'>Flow settings</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </li>
             <li>
                 <a href='#other-methods'>Other methods</a>
@@ -71,7 +87,7 @@ Debug class to support a better understand of what is going on during processing
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the context (processment) until de end of the context.<br>
 • I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and simplify development of test class and methods.<br>
 
-### <b id='private-constructor'>So the constructor is private</b>
+### <b id='private-constructor'>I. So the constructor is private</b>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
 The class has only one Debug type variable <b>'INSTANCE'</b>:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/2d71e8b2-2074-4850-af98-361b8145ec78)<br>
@@ -177,25 +193,27 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 <b>→ Default regex expression:</b> (?<=\\G.{340,400}),
 </pre>
 
-### You can use set methods to change custom settings:<br>
+### <b id='setting-tip'>You can use set methods to change custom settings:</b>
 <h4>Warning:</h4>
 
 ```diff
 -Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.
 ```
 
-<h4>Customize settings:</h4>
+<h4 id="customize-settings">Customize settings</h4>
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
 <b>→ setCharacterSplitSignal</b>
 </pre>
 
+<h4 id="serialize-values">Serialize values</h4>
 • You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
 <pre>
 <b>→ serializeLog</b>
 </pre>
 
+<h4 id="flow-settings">Flow settings</h4>
 <br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
 
 ## <b id='other-methods'>IV. Other methods</b>
