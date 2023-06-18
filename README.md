@@ -56,15 +56,15 @@ In the end, i will talk a little about customize the logic of this methods, but 
 &emsp;![Alt text](image-8.png)
 <br>&emsp;<b>→ Explanation:</b>
 <br>&emsp;1. In the message, a new section called 'Exception Data' is created, displaying what is important.
-<br>&emsp;2. With this we can implement exception log as simple, clear and fast as possible.
+<br>&emsp;2. With this, we can implement exception log as simple, clear and fast as possible.
 <hr>
 
 ### • log(Map<Object, Object> debugMap)
-&emsp;<b>→ Obs:</b> 
+&emsp;<b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
 <br>&emsp;<b>→ Screen shoot:
-<br>&emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b>
+<br>&emsp;![Alt text](image-9.png)
+&emsp;![Alt text](image-10.png)
+<br>&emsp;<b>→ Explanation:</b> Every '• key → value' use a different line to be displayed. 
 <hr>
 
 ### • log(Map<Object, Object> debugMap, Exception e)
