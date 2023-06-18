@@ -193,27 +193,27 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 <b>→ Default regex expression:</b> (?<=\\G.{340,400}),
 </pre>
 
-### <b id='setting-tip'>You can use set methods to change custom settings:</b>
+### <b id='setting-tip'>a. You can use set methods to change custom settings:</b>
 <h4>Warning:</h4>
 
 ```diff
 -Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.
 ```
 
-<h4 id="customize-settings">Customize settings</h4>
+<h4 id="customize-settings">a. Customize settings</h4>
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
 <b>→ setCharacterSplitSignal</b>
 </pre>
 
-<h4 id="serialize-values">Serialize values</h4>
+<h4 id="serialize-values">b. Serialize values</h4>
 • You can use a method to change the breakline to a serializiation, where the code stops to break line and convert the value to a JSON, where sometimes we can see all the line.
 <pre>
 <b>→ serializeLog</b>
 </pre>
 
-<h4 id="flow-settings">Flow settings</h4>
+<h4 id="flow-settings">c. Flow settings</h4>
 <br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
 
 ## <b id='other-methods'>IV. Other methods</b>
