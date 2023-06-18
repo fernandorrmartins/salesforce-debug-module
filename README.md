@@ -174,8 +174,10 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>→ Default regex expression:</b> (?<=\\G.{340,400}),
 </pre>
 
-• You can use set methods to change custom settings:
-<b style="color: orange;">Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
+• You can use set methods to change custom settings:<br>
+<text>
+    <b style="color: orange;">Warning: Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.</b>
+</text>
 <pre>
 <b>→ setMinSplitLenght</b>
 <b>→ setMaxSplitLenght</b>
