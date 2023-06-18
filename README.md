@@ -5,6 +5,11 @@
     </li>
     <li>
         <a href='#pattern'>Singleton Pattern</a>
+        <ol>
+            <li>
+                <a href='#private-constructor'>Private constructor</a>
+            </li>
+        </ol>
     </li>
     <li>
         <a href='#composition'>Debug module composition</a>
@@ -13,45 +18,45 @@
         <a href='#methods'>Methods</a>
         <ol>
             <li>
-                <a href=''>What happen as result</a>
+                <a href='#what-happen'>What happen as result</a>
             </li>
             <li>
-                <a href=''>Main methods</a>
+                <a href='#main-methods'>Main methods</a>
                 <ol>
                     <li>
-                        <a href=''>log()</a>
+                        <a href='#log-1'>log()</a>
                     </li>
                     <li>
-                        <a href=''>log(Object key, Object value)</a>
+                        <a href='#log-2'>log(Object key, Object value)</a>
                     </li>
                     <li>
-                        <a href=''>log(Exception e)</a>
+                        <a href='#log-3'>log(Exception e)</a>
                     </li>
                     <li>
-                        <a href=''>log(Map<Object, Object> debugMap)</a>
+                        <a href='#log-4'>log(Map<Object, Object> debugMap)</a>
                     </li>
                     <li>
-                        <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
+                        <a href='#log-5'>log(Map<Object, Object> debugMap, Exception e)</a>
                     </li>
                 </ol>
             </li>
             <li>
-                <a href=''>Important details</a>
+                <a href='#important-details'>Important details</a>
             </li>
             <li>
-                <a href=''>Other methods</a>
+                <a href='#other-methods'>Other methods</a>
                 <ol>
                     <li>
-                        <a href=''>start()</a>
+                        <a href='#start'>start()</a>
                     </li>
                     <li>
-                        <a href=''>end()</a>
+                        <a href='#end'>end()</a>
                     </li>
                     <li>
-                        <a href=''>setStart()</a>
+                        <a href='#set-start'>setStart()</a>
                     </li>
                     <li>
-                        <a href=''>setEnd()</a>
+                        <a href='#set-end'>setEnd()</a>
                     </li>
                 </ol>
             </li>
@@ -59,14 +64,14 @@
     </li>
 </ol>
 
-# <b id=''>1. [Salesforce] Debug Module</b>
+# <b id='about'>1. [Salesforce] Debug Module</b>
 Debug class to support a better understand of what is going on during processing of development, or about errors and exceptions.<br>
 
-# <b id=''>2. [Pattern] Singleton</b>
+# <b id='pattern'>2. [Pattern] Singleton</b>
 • This class use the sigleton pattern, where only one instance of this class is used since the start of the context (processment) until de end of the context.<br>
 • I am trying to use single responsabilities to, try to creating little methods to maintain code reusability, and simplify development of test class and methods.<br>
 
-### <b id=''>So the constructor is private</b>
+### <b id='private-constructor'>So the constructor is private</b>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/0c838ed9-90a3-4c7e-83fd-c2159a44485f)<br>
 The class has only one Debug type variable <b>'INSTANCE'</b>:<br>
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/2d71e8b2-2074-4850-af98-361b8145ec78)<br>
@@ -74,7 +79,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 ![image](https://github.com/fernandorrmartins/salesforce-debug-module/assets/32397071/697efa95-b436-4393-88c1-f70d5d669a5e)<br>
 <br>
 
-# <b id=''>3. Debug module composition</b>
+# <b id='composition'>3. Debug module composition</b>
 • This project contains only two classes.
 <pre>
 → Debug.cls
@@ -84,21 +89,21 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 • In the next content, i will show you how to use this util methods with some prints of samples.<br>
 • In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
 
-# <b id=''>4. Methods</b>
+# <b id='methods'>4. Methods</b>
 • The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', what line the debug log method was called, and key and values for the dev understand what is happening in the logic of the class, and where it is.<br>
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 
-## <b id=''>I. What happened?</b>
+## <b id='what-happen'>I. What happened?</b>
 <pre>
 <b>1. Class name:</b> As the method was called from executed anonymous block (developer console), its name appeared in the log message.
 <b>2. Method name:</b> As the method was called out of a method, nothing appeared in the method name.
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 </pre>
 
-## <b id=''>II. Main methods</b>
+## <b id='main-methods'>II. Main methods</b>
 
-### <b id=''>a. log()</b>
+### <b id='log-1'>a. log()</b>
 <pre>
 <b>→ Obs:</b> This method call a debug log message with basic information as showed above but, we will present it called from a simple class here.
 </pre>
@@ -111,7 +116,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>b. log(Object key, Object value)</b>
+### <b id='log-2'>b. log(Object key, Object value)</b>
 <pre>
 <b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
 <b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
@@ -126,7 +131,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>c. log(Exception e)</b>
+### <b id='log-3'>c. log(Exception e)</b>
 <pre>
 <b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
 </pre>
@@ -140,7 +145,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>d. log(Map<Object, Object> debugMap)</b>
+### <b id='log-4'>d. log(Map<Object, Object> debugMap)</b>
 <pre>
 <b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
 </pre>
@@ -152,7 +157,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>e. log(Map<Object, Object> debugMap, Exception e)</b>
+### <b id='log-5'>e. log(Map<Object, Object> debugMap, Exception e)</b>
 <pre>
 <b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
 </pre>
@@ -164,7 +169,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-## <b id=''>III. Important details</b>
+## <b id='important-details'>III. Important details</b>
 • Some times, we try to log long messages, that some times can be hidden by developer log, or the log itself when opened in a IDE or text editor, but with this class, i prepared a break line function to break long values message, using a <b>Regex expression</b>, based in line size, and that use a default <b>Break simbol</b>, that can be customized using a set method. By default:
 <pre>
 <b>→ The split character simbol:</b> A comma (,)
@@ -193,9 +198,9 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 
 <br>• Every customization is reseted after the end of the proccess to log the data by a method inside the proccess called <b>'cleanInstanceVariables'</b>. So if you want to customize, you will need to change defaults again.
 
-## <b id=''>IV. Other methods</b>
+## <b id='other-methods'>IV. Other methods</b>
 
-### <b id=''>a. start()</b>
+### <b id='start'>a. start()</b>
 <pre>
 <b>→ Obs:</b> This method is used in the place of 'log()' method without parameters. The difference between this two methos is only a aditional message showed indicating that the method you want to analize is 'starting...'.
 </pre>
@@ -207,7 +212,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>b. end()</b>
+### <b id='end'>b. end()</b>
 <pre>
 <b>→ Obs:</b> Equals to the start, but is used to be placed in the end of the method.
 </pre>
@@ -219,7 +224,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>c. setStart()</b>
+### <b id='set-start'>c. setStart()</b>
 <pre>
 <b>→ Obs:</b> You can use 'setStart()' method to add this additional message in a more complex log, to analyse for example parameters that the method received and its values when starting the method.
 </pre>
@@ -232,7 +237,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id=''>d. setEnd()</b>
+### <b id='set-end'>d. setEnd()</b>
 <pre>
 <b>→ Obs:</b> You can use 'setEnd()' method to add this additional message in a more complex log, to analyse for example parameters when the method is ending, and see what happened during proccessment.
 </pre>
