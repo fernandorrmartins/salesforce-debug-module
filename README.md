@@ -5,7 +5,7 @@
     </li>
     <li>
         <a href='pattern'>Singleton Pattern</a><br>
-        <ol>
+        <ol start='1'>
             <li>
                 <a href='pattern'>Private constructor</a><br>
             </li>
