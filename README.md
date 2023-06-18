@@ -20,9 +20,27 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 • DebugTest.cls<br>
 <br>
 The main class is Debug, wich have some util methods to help developer debug and understand what is going on.<br>
-<br>
 In the next content, i will show you how to use this util methods with some prints of samples.<br>
-In the end, i will talk a listtle about customize the logic of this methods, but it probably will be very rare to use.<br>
+In the end, i will talk a little about customize the logic of this methods, but it probably will be very rare to use.<br>
+
+# Methods
+• The main proposite of this class is to log some key points to understand the code, as what 'class', 'method', and in what line
+the debug log method was called.
+![Alt text](image.png)
+![Alt text](image-1.png)
+1. As the method was called from the first line, the first line was showed in the log message.
+2. As the method was called from executed anonymous block (developer console), his name appeared in the log message.
+3. As the method was called out of a method, nothing appeared in the method name.
+## Main methods
+• log()
+    Detail: This method call a debug log message to 
+• log(Object key, Object value)
+• log(Exception e)
+• log(Map<Object, Object> debugMap)
+• log(Map<Object, Object> debugMap, Exception e)
+
+## Other methods:
+
 
 # Salesforce DX Project: Next Steps
 
