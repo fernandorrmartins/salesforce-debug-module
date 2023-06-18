@@ -30,7 +30,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>3. Line number:</b> As the method was called out of a method, nothing appeared in the method name.
 ## Main methods
 <b>• log()</b><br>
-    Detail: This method call a debug log message to .<br>
+    <b>Obs:</b> This method call a debug log message to .<br>
 <b>• log(Object key, Object value)</b><br>
 <b>• log(Exception e)</b><br>
 <b>• log(Map<Object, Object> debugMap)</b><br>
