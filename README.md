@@ -176,6 +176,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 
 • You can use set methods to change custom settings:<br>
 <h4>Warning:</h4>
+
 ```diff
 -Be carefull! Some complex, and long strings with a long split lenght (min → max) can generate a 'to complex regex' exception.
 ```
