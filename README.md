@@ -31,11 +31,11 @@ In the end, i will talk a little about customize the logic of this methods, but 
 ## Main methods
 <b>• log()</b><br>
 &emsp;<b>Obs:</b> This method call a debug log message with basic information as showed above but we will present it called from a simple class here.<br>
-&emsp;<b>Screen shoot:</b>
-&emsp;![Alt text](image-5.png)
-&emsp;![Alt text](image-6.png)
-&emsp;![Alt text](image-2.png)
-&emsp;!In the screen shoots above we can see the key points easisly, but it is the most simples sample here.
+&emsp;<b>Screen shoot:</b><br>
+&emsp;![Alt text](image-5.png)<br>
+&emsp;![Alt text](image-6.png)<br>
+&emsp;![Alt text](image-2.png)<br>
+&emsp;!In the screen shoots above we can see the key points easisly, but it is the most simples sample here.<br>
 <b>• log(Object key, Object value)</b><br>
 <b>• log(Exception e)</b><br>
 <b>• log(Map<Object, Object> debugMap)</b><br>
