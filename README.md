@@ -1,15 +1,19 @@
 # Summary
 <ol>
     <li>
-        <a href='about'>1. Debug Module</a><br>
+        <a href='about'>Debug Module</a><br>
     </li>
     <li>
-        <a href='pattern'>2. Singleton Pattern</a><br>
-        <li>
-            <a href='pattern'>2.2 Private constructor</a><br>
-        </li>
+        <a href='pattern'>Singleton Pattern</a><br>
+        <ol>
+            <li>
+                <a href='pattern'>Private constructor</a><br>
+            </li>
+        </ol>
     </li>
-        <a href='about'>2. Singleton Pattern</a><br>
+    <li>
+        <a href='about'>Singleton Pattern</a><br>
+    </li>
 </ol>
 
 # 1. [Salesforce] Debug Module
