@@ -36,7 +36,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 &emsp;![Alt text](image-6.png)
 &emsp;![Alt text](image-2.png)
 <br>&emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easily, as 'class name', 'method name', and 'line number', but it is the most simple sample here.<br>
-</hr>
+</hr><br>
 ### • log(Object key, Object value)
 &emsp;<b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
 <br>&emsp;<b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
@@ -46,7 +46,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Explanation:</b>
 <br>&emsp;1. The 'key' value is presented as an key in the message to identify the value you want to see.
 <br>&emsp;2. The 'value' is presented to visualize what is saved inside the variable.
-</hr>
+</hr><br>
 ### • log(Exception e)
 &emsp;<b>→ Obs:</b> This is my favorite one. Every dev format a exception message with his own pattern, what make the code different, and can add alot of lines to the project, but this method format the message with a single and easy pattern that help to undertand the key points.
 <br>&emsp;<b>→ Screen shoot:
@@ -55,14 +55,14 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;<b>→ Explanation:</b>
 <br>&emsp;1. In the message section, a nem section called 'Exception Data' is created, displaying what is important.
 <br>&emsp;2. With this we can implement exception log as simple, clear and fast as possible.
-</hr>
+</hr><br>
 ### • log(Map<Object, Object> debugMap)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
 <br>&emsp;
 &emsp;
 <br>&emsp;<b>→ Explanation:</b>
-</hr>
+</hr><br>
 ### • log(Map<Object, Object> debugMap, Exception e)
 &emsp;<b>→ Obs:</b> 
 <br>&emsp;<b>→ Screen shoot:
