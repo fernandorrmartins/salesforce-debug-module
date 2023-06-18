@@ -55,7 +55,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <br>&emsp;![Alt text](image-7.png)
 &emsp;![Alt text](image-8.png)
 <br>&emsp;<b>→ Explanation:</b>
-<br>&emsp;1. In the message section, a nem section called 'Exception Data' is created, displaying what is important.
+<br>&emsp;1. In the message, a new section called 'Exception Data' is created, displaying what is important.
 <br>&emsp;2. With this we can implement exception log as simple, clear and fast as possible.
 <hr>
 
