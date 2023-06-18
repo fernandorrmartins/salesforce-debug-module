@@ -14,7 +14,7 @@
     </li>
     <li style="display: block;">
         <a href=''>Methods</a>
-        <ol style="counter-reset: item;">
+        <ol style="counter-reset: item;" start="1.1">
             <li>
                 <a href=''>What happen as result</a>
             </li>
