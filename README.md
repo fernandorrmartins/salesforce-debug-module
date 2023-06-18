@@ -37,11 +37,11 @@ In the end, i will talk a little about customize the logic of this methods, but 
 &emsp;![Alt text](image-2.png)
 <br>&emsp;<b>→ Explanation:</b> In the screen shoots above we can see the key points easily, as 'class name', 'method name', and 'line number', but it is the most simple sample here.<br>
 ### • log(Object key, Object value)
-&emsp;<b>→ Obs:</b> 
+&emsp;<b>→ Obs:</b> Here, we start to add some complexity to the debug logs. We can add lines, and this lines ('key → values') to see the result of some proccessment, or see what is happening insed the code.
+<br>&emsp;<b>→ Obs²:</b> As the parameters are of type <b>Object</b>, it can accept any type of values, as SObject, maps, lists, and any other primitive or complex types.
 <br>&emsp;<b>→ Screen shoot:
-<br>&emsp;
-&emsp;
-&emsp;
+<br>&emsp;![Alt text](image-3.png)
+&emsp;![Alt text](image-4.png)
 <br>&emsp;<b>→ Explanation:</b> 
 ### • log(Exception e)
 &emsp;<b>→ Obs:</b> 
