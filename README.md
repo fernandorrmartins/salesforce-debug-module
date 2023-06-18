@@ -68,11 +68,11 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <hr>
 
 ### • log(Map<Object, Object> debugMap, Exception e)
-&emsp;<b>→ Obs:</b> 
+&emsp;<b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
 <br>&emsp;<b>→ Screen shoot:
-<br>&emsp;
-&emsp;
-<br>&emsp;<b>→ Explanation:</b>
+<br>&emsp;![Alt text](image-11.png)
+&emsp;![Alt text](image-12.png)
+<br>&emsp;<b>→ Explanation:</b> We can send at same time a key value map, with the exception threw to see everything easly.
 
 ## Other methods:
 &emsp;<b>→ Obs:</b> 
