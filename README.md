@@ -7,23 +7,22 @@
         <a href='pattern'>Singleton Pattern</a>
     </li>
     <li>
+        <a href=''>Other methods</a>
+    </li>
+    <ol>
         <li>
-            <a href=''>Other methods</a>
-            <ol>
-                <li>
-                    <a href=''>start()</a>
-                </li>
-                <li>
-                    <a href=''>end()</a>
-                </li>
-                <li>
-                    <a href=''>setStart()</a>
-                </li>
-                <li>
-                    <a href=''>setEnd()</a>
-                </li>
-            </ul>
+            <a href=''>start()</a>
         </li>
+        <li>
+            <a href=''>end()</a>
+        </li>
+        <li>
+            <a href=''>setStart()</a>
+        </li>
+        <li>
+            <a href=''>setEnd()</a>
+        </li>
+    </ol>
     <li>
         <a href=''>Debug module composition</a>
     </li>
@@ -53,7 +52,7 @@
             <li>
                 <a href=''>log(Map<Object, Object> debugMap, Exception e)</a>
             </li>
-        </ul>
+        </ol>
         <li>
             <a href=''>Important details</a>
         </li>
@@ -73,8 +72,8 @@
             <li>
                 <a href=''>setEnd()</a>
             </li>
-        </ul>
-    </ul>
+        </ol>
+    </ol>
 </ol>
 
 # <b id=''>1. [Salesforce] Debug Module</b>
