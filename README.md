@@ -30,7 +30,7 @@ In the end, i will talk a little about customize the logic of this methods, but 
 <b>3. Line number:</b> As the method was called from the first line, the first line was showed in the log message.
 ## Main methods
 <b>• log()</b><br>
-    <b>Obs:</b> This method call a debug log message to .<br>
+&emsp;<b>Obs:</b> This method call a debug log message to .<br>
 <b>• log(Object key, Object value)</b><br>
 <b>• log(Exception e)</b><br>
 <b>• log(Map<Object, Object> debugMap)</b><br>
