@@ -33,10 +33,10 @@
                         <a href='#log-3'>log(Exception e)</a>
                     </li>
                     <li>
-                        <a href='#log-4'>log(Map<Object, Object> debugMap)</a>
+                        <a href='#log-4'>log(Map <Object, Object> debugMap)</a>
                     </li>
                     <li>
-                        <a href='#log-5'>log(Map<Object, Object> debugMap, Exception e)</a>
+                        <a href='#log-5'>log(Map <Object, Object> debugMap, Exception e)</a>
                     </li>
                 </ol>
             </li>
