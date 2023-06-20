@@ -33,10 +33,10 @@
                         <a href='#log-3'>log(Exception e)</a>
                     </li>
                     <li>
-                        <a href='#log-4'>log(Map <Object, Object> debugMap)</a>
+                        <a href='#log-4'>log(Map&lt;Object, Object&gt; debugMap)</a>
                     </li>
                     <li>
-                        <a href='#log-5'>log(Map <Object, Object> debugMap, Exception e)</a>
+                        <a href='#log-5'>log(Map&lt;Object, Object&gt; debugMap, Exception e)</a>
                     </li>
                 </ol>
             </li>
@@ -161,9 +161,9 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id='log-4'>d. log(Map<Object, Object> debugMap)</b>
+### <b id='log-4'>d. log(Map&lt;Object, Object&gt; debugMap)</b>
 <pre>
-<b>→ Obs:</b> Passing a Map<Object, Object> , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
+<b>→ Obs:</b> Passing a Map&lt;Object, Object&gt; , where the key map is the 'key' in the message, and the value map, is the 'value' in the message, we can log alot of values to see all we want easly.
 </pre>
 &emsp;<b>[Screen shoots]</b>
 <br>&emsp;![Alt text](image-9.png)
@@ -173,7 +173,7 @@ That will be used for call the methods with the follow <b>'getInstance'</b> meth
 </pre>
 <hr></hr>
 
-### <b id='log-5'>e. log(Map<Object, Object> debugMap, Exception e)</b>
+### <b id='log-5'>e. log(Map&lt;Object, Object&gt; debugMap, Exception e)</b>
 <pre>
 <b>→ Obs:</b> And we can combine the useful with the pleasant to present both the data that were used and the data of the exception generated to understand what happened.
 </pre>
