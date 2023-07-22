@@ -3,81 +3,86 @@
 @author:		Fernando Rodrigues Ribeiro Martins
 @date:			2023-03-06
 **********************************************************************************************************************************************************************/
-public without sharing class Debug
-{
+public without sharing class Debug {
     /* Static Variables */
     @TestVisible
-    private static final Integer GREAT_SIZE_LINE_MIN            = 340;
+    private static final Integer GREAT_SIZE_LINE_MIN = 340;
     @TestVisible
-    private static final Integer GREAT_SIZE_LINE_MAX            = 400;
+    private static final Integer GREAT_SIZE_LINE_MAX = 400;
     @TestVisible
-    private static final String TITLE_BREAK_GREAT_LINES         = ' Great line ';
+    private static final String TITLE_BREAK_GREAT_LINES = ' Great line ';
     @TestVisible
-    private static final String TITLE_END_GREAT_LINES           = ' End g. line ';
+    private static final String TITLE_END_GREAT_LINES = ' End g. line ';
     @TestVisible
-    private static final String TITLE_EXCEPTION                 = ' Exception Data ';
+    private static final String TITLE_EXCEPTION = ' Exception Data ';
     @TestVisible
-    private static final String PATTERN_BODY_LINE               = ' • {0} → {1}';
+    private static final String PATTERN_BODY_LINE = ' • {0} → {1}';
     @TestVisible
-    private static final String PATTERN_SPLIT_CLASS_METHOD      = 'Class.';
+    private static final String PATTERN_SPLIT_CLASS_METHOD = 'Class.';
     @TestVisible
-    private static final String PATTERN_SPLIT_TRIGGER_METHOD    = 'Trigger.';
+    private static final String PATTERN_SPLIT_TRIGGER_METHOD = 'Trigger.';
     @TestVisible
-    private static final String PATTERN_OWN_DEBUG_CLASS         = 'Class.Debug.';
+    private static final String PATTERN_OWN_DEBUG_CLASS = 'Class.Debug.';
     @TestVisible
-    private static final String CHARACTER_DOT                   = '.';
+    private static final String CHARACTER_DOT = '.';
     @TestVisible
-    private static final String CHARACTER_COMMA                 = ',';
+    private static final String CHARACTER_COMMA = ',';
     @TestVisible
-    private static final String CHARACTER_DOUBLE_DOT            = ':';
+    private static final String CHARACTER_DOUBLE_DOT = ':';
     @TestVisible
-    private static final String PATTERN_GET_LINE                = 'line ';
+    private static final String PATTERN_GET_LINE = 'line ';
     @TestVisible
-    private static final String REGEX_SPLIT_SIZE_LENGH_COMMA    = '(?<=\\G.{param1,param2})param3';
+    private static final String REGEX_SPLIT_SIZE_LENGH_COMMA = '(?<=\\G.{param1,param2})param3';
     @TestVisible
-    private static final String CHARACTER_EMPTY                 = '';
+    private static final String CHARACTER_EMPTY = '';
     @TestVisible
-    private static final String CHARACTER_BREAK_LINE            = '\n';
+    private static final String CHARACTER_BREAK_LINE = '\n';
     @TestVisible
-    private static final String CHARACTER_SPLIT_SIGNAL          = ',';
+    private static final String CHARACTER_SPLIT_SIGNAL = ',';
     @TestVisible
-    private static final String DIVISION_CHARACTER_DEBUG        = '#';
+    private static final String DIVISION_CHARACTER_DEBUG = '#';
     @TestVisible
-    private static final String DIVISION_CHARACTER_LINE         = '=';
+    private static final String DIVISION_CHARACTER_LINE = '=';
     @TestVisible
-    private static final String MESSAGE_START_METHOD            = 'Method start...';
+    private static final String MESSAGE_START_METHOD = 'Method start...';
     @TestVisible
-    private static final String MESSAGE_END_METHOD              = 'Method end...';
+    private static final String MESSAGE_END_METHOD = 'Method end...';
     @TestVisible
-    private static final String MESSAGE_BODY                    = '\nClass name: {0}\nMethod name: {1}\nLine number: {2}{3}{4}';
+    private static final String MESSAGE_BODY = '\nClass name: {0}\nMethod name: {1}\nLine number: {2}{3}{4}';
     @TestVisible
-    private static final String MESSAGE_BODY_DETAIL             = '\nDetail: ';
+    private static final String MESSAGE_BODY_DETAIL = '\nDetail: ';
     @TestVisible
-    private static final String MESSAGE_BODY_MESSAGE             = '\nMessage:\n';
+    private static final String MESSAGE_BODY_MESSAGE = '\nMessage:\n';
     @TestVisible
-    private static final String MESSAGE_FORMAT
-    {
-        private set;
+    private static final String MESSAGE_FORMAT {
         private get {
-            if(String.isBlank(Debug.MESSAGE_FORMAT))
-			{
+            if (String.isBlank(Debug.MESSAGE_FORMAT)) {
                 Debug.MESSAGE_FORMAT =
-                    Debug.CHARACTER_BREAK_LINE + Debug.CHARACTER_EMPTY.center(Debug.GREAT_SIZE_LINE_MAX, Debug.DIVISION_CHARACTER_DEBUG) +
+                    Debug.CHARACTER_BREAK_LINE +
+                    Debug.CHARACTER_EMPTY.center(
+                        Debug.GREAT_SIZE_LINE_MAX,
+                        Debug.DIVISION_CHARACTER_DEBUG
+                    ) +
                     Debug.MESSAGE_BODY +
-                    Debug.CHARACTER_BREAK_LINE + Debug.CHARACTER_EMPTY.center(Debug.GREAT_SIZE_LINE_MAX, Debug.DIVISION_CHARACTER_DEBUG);
+                    Debug.CHARACTER_BREAK_LINE +
+                    Debug.CHARACTER_EMPTY.center(
+                        Debug.GREAT_SIZE_LINE_MAX,
+                        Debug.DIVISION_CHARACTER_DEBUG
+                    );
             }
             return Debug.MESSAGE_FORMAT;
         }
+        private set;
     }
     @TestVisible
-    private static final Debug INSTANCE
-    {
-        private set;
-        private get
-        {
-            if(Debug.INSTANCE == null){ Debug.INSTANCE = new Debug(); }
+    private static final Debug INSTANCE {
+        private get {
+            if (Debug.INSTANCE == null) {
+                Debug.INSTANCE = new Debug();
+            }
             return Debug.INSTANCE;
         }
+        private set;
     }
 
     /* Instance Variables */
@@ -92,69 +97,60 @@ public without sharing class Debug
     @TestVisible
     private String informationalMessage = Debug.CHARACTER_EMPTY;
     @TestVisible
-    private String characterSplitSignal
-    {
-        private set;
+    private String characterSplitSignal {
         private get {
-            if(String.isBlank(this.characterSplitSignal))
-            {
+            if (String.isBlank(this.characterSplitSignal)) {
                 this.characterSplitSignal = Debug.CHARACTER_SPLIT_SIGNAL;
             }
             return characterSplitSignal;
         }
+        private set;
     }
 
-    private Debug() {}
-    
-    public static Debug getInstance()
-    {
+    private Debug() {
+        /* Private constructor. */
+    }
+
+    public static Debug getInstance() {
         return Debug.INSTANCE;
     }
 
-    public String start()
-    {
+    public String start() {
         this.setStart();
         return this.log();
     }
 
-    public Debug setStart()
-    {
+    public Debug setStart() {
         this.informationalMessage = Debug.MESSAGE_START_METHOD;
         return this;
     }
 
-    public String end()
-    {
+    public String end() {
         this.setEnd();
         return this.log();
     }
 
-    public Debug setEnd()
-    {
+    public Debug setEnd() {
         this.informationalMessage = Debug.MESSAGE_END_METHOD;
         return this;
     }
 
-    public Debug setMinSplitLenght(Integer minSplitLenght)
-    {
+    public Debug setMinSplitLenght(Integer minSplitLenght) {
         this.minSplitLenght = minSplitLenght;
         return this;
     }
 
-    public Debug setMaxSplitLenght(Integer maxSplitLenght)
-    {
+    public Debug setMaxSplitLenght(Integer maxSplitLenght) {
         this.maxSplitLenght = maxSplitLenght;
         return this;
     }
 
-    public Debug setCharacterSplitSignal(String characterSignal)
-    {
+    public Debug setCharacterSplitSignal(String characterSignal) {
         this.characterSplitSignal = characterSignal;
         return this;
     }
 
-    public Debug cleanInstanceVariables()
-    {
+    public Debug cleanInstanceVariables() {
         this.serializeLog = false;
         this.breakLines = true;
         this.minSplitLenght = null;
@@ -164,28 +160,24 @@ public without sharing class Debug
         return this;
     }
 
-    public Debug serializeLog()
-    {
+    public Debug serializeLog() {
         this.serializeLog = true;
         this.breakLines = false;
         return this;
     }
 
-    public Debug setBreakLines()
-    {
+    public Debug setBreakLines() {
         this.breakLines = true;
         return this;
     }
 
-    public String log(Object key, Object value)
-    {
+    public String log(Object key, Object value) {
         String bodyMessage = this.getKeyValueLine(key, value);
         return this.log(bodyMessage);
     }
 
-    public String log()
-    {
-        return this.log(new Map<Object,Object>());
+    public String log() {
+        return this.log(new Map<Object, Object>());
     }
 
     public String log(Exception e) {
@@ -193,8 +185,17 @@ public without sharing class Debug
     }
 
     public String log(Map<Object, Object> debugMap, Exception e) {
-        String debugLine =  Debug.DIVISION_CHARACTER_LINE.leftPad(30, DIVISION_CHARACTER_LINE);
-        debugMap.put('', String.format('{0}{1}{2}', new String[] { debugLine, Debug.TITLE_EXCEPTION, debugLine }));
+        String debugLine = Debug.DIVISION_CHARACTER_LINE.leftPad(
+            30,
+            DIVISION_CHARACTER_LINE
+        );
+        debugMap.put(
+            '',
+            String.format(
+                '{0}{1}{2}',
+                new List<String>{ debugLine, Debug.TITLE_EXCEPTION, debugLine }
+            )
+        );
         debugMap.put('TypeName', e.getTypeName());
         debugMap.put('LineNumber', String.valueOf(e.getLineNumber()));
         debugMap.put('Cause', String.valueOf(e.getCause()));
@@ -203,14 +204,12 @@ public without sharing class Debug
         return this.log(debugMap);
     }
 
-    public String log(Map<Object, Object> debugMap)
-    {
+    public String log(Map<Object, Object> debugMap) {
         String bodyMessage = this.getBodyMessage(debugMap);
         return this.log(bodyMessage);
     }
 
-    public String log(String bodyMessage)
-    {
+    public String log(String bodyMessage) {
         String message = this.prepareLogMessage(bodyMessage);
         this.cleanInstanceVariables();
         System.debug(System.LoggingLevel.DEBUG, message);
@@ -218,28 +217,31 @@ public without sharing class Debug
     }
 
     @TestVisible
-    private String prepareLogMessage(String bodyMesage)
-    {
+    private String prepareLogMessage(String bodyMesage) {
         String line = this.getClassMethodNameLine();
         String className = this.getClassName(line);
         String methodName = this.getMethodName(line);
         String lineNumber = this.getLineNumber(line);
-        String message = this.getMessage(className, methodName, lineNumber, bodyMesage);
+        String message = this.getMessage(
+            className,
+            methodName,
+            lineNumber,
+            bodyMesage
+        );
         return message;
     }
 
     @TestVisible
-    private String getClassMethodNameLine()
-    {
+    private String getClassMethodNameLine() {
         String stacktraceString = new DmlException().getStackTraceString();
         List<String> lines = stacktraceString.split(Debug.CHARACTER_BREAK_LINE);
         String line = Debug.CHARACTER_EMPTY;
-        if(!lines.isEmpty())
-        {
-            for(String lineStr : lines)
-            {
-                if(String.isNotBlank(lineStr) && !lineStr.contains(Debug.PATTERN_OWN_DEBUG_CLASS))
-                {
+        if (!lines.isEmpty()) {
+            for (String lineStr : lines) {
+                if (
+                    String.isNotBlank(lineStr) &&
+                    !lineStr.contains(Debug.PATTERN_OWN_DEBUG_CLASS)
+                ) {
                     line = lineStr;
                     break;
                 }
@@ -249,102 +251,121 @@ public without sharing class Debug
     }
 
     @TestVisible
-    private String cleanClassMethodNameLine(String line)
-    {
-        line = String.isNotBlank(line) ? line.replace(Debug.PATTERN_SPLIT_CLASS_METHOD, Debug.CHARACTER_EMPTY) : line;
-        line = String.isNotBlank(line) ? line.replace(Debug.PATTERN_SPLIT_TRIGGER_METHOD, Debug.CHARACTER_EMPTY) : line;
+    private String cleanClassMethodNameLine(String line) {
+        line = String.isNotBlank(line)
+            ? line.replace(
+                  Debug.PATTERN_SPLIT_CLASS_METHOD,
+                  Debug.CHARACTER_EMPTY
+              )
+            : line;
+        line = String.isNotBlank(line)
+            ? line.replace(
+                  Debug.PATTERN_SPLIT_TRIGGER_METHOD,
+                  Debug.CHARACTER_EMPTY
+              )
+            : line;
         return line;
     }
 
-    public String getClassName()
-    {
+    public String getClassName() {
         return this.getClassName(this.getClassMethodNameLine());
     }
 
     @TestVisible
-    private String getClassName(String line)
-    {
+    private String getClassName(String line) {
         String classPattern = Debug.PATTERN_SPLIT_CLASS_METHOD;
-        String className = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringBeforeLast(Debug.CHARACTER_DOT);
+        String className = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT)
+            .substringBeforeLast(Debug.CHARACTER_DOT);
         return className;
     }
 
-    public String getMethodName()
-    {
+    public String getMethodName() {
         return this.getMethodName(this.getClassMethodNameLine());
     }
 
     @TestVisible
-    private String getMethodName(String line)
-    {
-        String methodName = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT).substringAfterLast(Debug.CHARACTER_DOT);
+    private String getMethodName(String line) {
+        String methodName = line.substringBefore(Debug.CHARACTER_DOUBLE_DOT)
+            .substringAfterLast(Debug.CHARACTER_DOT);
         return methodName;
     }
 
-    public String getLineNumber()
-    {
+    public String getLineNumber() {
         return this.getLineNumber(this.getClassMethodNameLine());
     }
 
     @TestVisible
-    private String getLineNumber(String line)
-    {
-        String lineNumber = line.substringAfter(Debug.PATTERN_GET_LINE).substringBefore(Debug.CHARACTER_COMMA);
+    private String getLineNumber(String line) {
+        String lineNumber = line.substringAfter(Debug.PATTERN_GET_LINE)
+            .substringBefore(Debug.CHARACTER_COMMA);
         return lineNumber;
     }
 
-    public String getMessage(String className, String methodName, String lineNumber, String bodyMessage)
-    {
+    public String getMessage(
+        String className,
+        String methodName,
+        String lineNumber,
+        String bodyMessage
+    ) {
         String message = String.format(
             Debug.MESSAGE_FORMAT,
-            new String[] {
+            new List<String>{
                 className,
                 methodName,
                 lineNumber,
-                String.isNotBlank(this.informationalMessage) ? Debug.MESSAGE_BODY_DETAIL + this.informationalMessage : Debug.CHARACTER_EMPTY,
-                String.isNotBlank(bodyMessage) ? Debug.MESSAGE_BODY_MESSAGE + bodyMessage : Debug.CHARACTER_EMPTY
+                String.isNotBlank(this.informationalMessage)
+                    ? Debug.MESSAGE_BODY_DETAIL + this.informationalMessage
+                    : Debug.CHARACTER_EMPTY,
+                String.isNotBlank(bodyMessage)
+                    ? Debug.MESSAGE_BODY_MESSAGE + bodyMessage
+                    : Debug.CHARACTER_EMPTY
             }
         );
         return message;
     }
 
-    public String getBodyMessage(Map<Object, Object> debugMap)
-    {
+    public String getBodyMessage(Map<Object, Object> debugMap) {
         List<String> bodyPeaces = new List<String>();
-        if(debugMap != null)
-        {
-            for(Object key : debugMap.keySet())
-            {
+        if (debugMap != null) {
+            for (Object key : debugMap.keySet()) {
                 Object value = debugMap.get(key);
                 String bodyLine = this.getKeyValueLine(key, value);
                 bodyPeaces.add(bodyLine);
             }
         }
-        String bodyMessage = String.join(bodyPeaces, Debug.CHARACTER_BREAK_LINE);
+        String bodyMessage = String.join(
+            bodyPeaces,
+            Debug.CHARACTER_BREAK_LINE
+        );
         return bodyMessage;
     }
 
-    public String getKeyValueLine(Object key, Object value)
-    {
+    public String getKeyValueLine(Object key, Object value) {
         String keyStr = String.valueOf(key);
-        String valueStr = this.serializeLog ? JSON.serialize(value) : String.valueOf(value);
+        String valueStr = this.serializeLog
+            ? JSON.serialize(value)
+            : String.valueOf(value);
         valueStr = this.breakLines ? this.breakLines(valueStr) : valueStr;
-        String keyValueLine = String.format(Debug.PATTERN_BODY_LINE, new List<String> { keyStr, valueStr });
+        String keyValueLine = String.format(
+            Debug.PATTERN_BODY_LINE,
+            new List<String>{ keyStr, valueStr }
+        );
         return keyValueLine;
     }
 
     @TestVisible
-    private Boolean validateMinAndMaxSplitSize()
-    {
+    private Boolean validateMinAndMaxSplitSize() {
         Boolean validMinAndMax =
-            minSplitLenght != null && this.maxSplitLenght != null &&
-            minSplitLenght > 0 && this.maxSplitLenght > 0 && minSplitLenght < this.maxSplitLenght;
+            minSplitLenght != null &&
+            this.maxSplitLenght != null &&
+            minSplitLenght > 0 &&
+            this.maxSplitLenght > 0 &&
+            minSplitLenght < this.maxSplitLenght;
         return validMinAndMax;
     }
 
     @TestVisible
-    private String setMinMaxSplitLenghtRegex(Integer min, Integer max)
-    {
+    private String setMinMaxSplitLenghtRegex(Integer min, Integer max) {
         String regex = Debug.REGEX_SPLIT_SIZE_LENGH_COMMA
             .replace('param1', String.valueOf(min))
             .replace('param2', String.valueOf(max))
@@ -352,19 +373,36 @@ public without sharing class Debug
         return regex;
     }
 
-    public String breakLines(String text)
-    {
+    public String breakLines(String text) {
         Boolean validMinAndMax = this.validateMinAndMaxSplitSize();
         minSplitLenght = validMinAndMax ? minSplitLenght : GREAT_SIZE_LINE_MIN;
         maxSplitLenght = validMinAndMax ? maxSplitLenght : GREAT_SIZE_LINE_MAX;
-        String splitRegex = this.setMinMaxSplitLenghtRegex(minSplitLenght, maxSplitLenght);
-        Boolean needBreak = String.isNotBlank(text) && text.length() > minSplitLenght;
-        List<String> splitedText = needBreak ? text.split(splitRegex) : new List<String> { text };
-        text = needBreak ?
-            Debug.CHARACTER_BREAK_LINE + Debug.TITLE_BREAK_GREAT_LINES.center(GREAT_SIZE_LINE_MAX, Debug.DIVISION_CHARACTER_LINE) + Debug.CHARACTER_BREAK_LINE +
-            String.join(splitedText, this.characterSplitSignal + Debug.CHARACTER_BREAK_LINE) +
-            Debug.CHARACTER_BREAK_LINE + Debug.TITLE_END_GREAT_LINES.center(GREAT_SIZE_LINE_MAX, Debug.DIVISION_CHARACTER_LINE) :
-            text;
+        String splitRegex = this.setMinMaxSplitLenghtRegex(
+            minSplitLenght,
+            maxSplitLenght
+        );
+        Boolean needBreak =
+            String.isNotBlank(text) && text.length() > minSplitLenght;
+        List<String> splitedText = needBreak
+            ? text.split(splitRegex)
+            : new List<String>{ text };
+        text = needBreak
+            ? Debug.CHARACTER_BREAK_LINE +
+              Debug.TITLE_BREAK_GREAT_LINES.center(
+                  GREAT_SIZE_LINE_MAX,
+                  Debug.DIVISION_CHARACTER_LINE
+              ) +
+              Debug.CHARACTER_BREAK_LINE +
+              String.join(
+                  splitedText,
+                  this.characterSplitSignal + Debug.CHARACTER_BREAK_LINE
+              ) +
+              Debug.CHARACTER_BREAK_LINE +
+              Debug.TITLE_END_GREAT_LINES.center(
+                  GREAT_SIZE_LINE_MAX,
+                  Debug.DIVISION_CHARACTER_LINE
+              )
+            : text;
         return text;
     }
 }

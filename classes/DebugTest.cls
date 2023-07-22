@@ -8,118 +8,137 @@ class DebugTest {
     private static final String className = 'DebugTest';
 
     @isTest
-    static void startTest()
-    {
+    static void startTest() {
         String message = Debug.getInstance().start();
-        System.assert(message.contains(Debug.MESSAGE_START_METHOD));
+        Assert.isTrue(message.contains(Debug.MESSAGE_START_METHOD));
     }
 
     @isTest
-    static void setStartTest()
-    {
+    static void setStartTest() {
         Debug debugInstance = Debug.getInstance().setStart();
-        System.assert(Debug.MESSAGE_START_METHOD.equals(debugInstance.informationalMessage));
+        Assert.areEqual(
+            Debug.MESSAGE_START_METHOD,
+            debugInstance.informationalMessage
+        );
         debugInstance.cleanInstanceVariables();
-        System.assert(Debug.CHARACTER_EMPTY.equals(debugInstance.informationalMessage));
+        Assert.areEqual(
+            Debug.CHARACTER_EMPTY,
+            debugInstance.informationalMessage
+        );
     }
 
     @isTest
-    static void endTest()
-    {
+    static void endTest() {
         String message = Debug.getInstance().end();
-        System.assert(message.contains(Debug.MESSAGE_END_METHOD));
+        Assert.isTrue(message.contains(Debug.MESSAGE_END_METHOD));
     }
 
     @isTest
-    static void setEndTest()
-    {
+    static void setEndTest() {
         Debug debugInstance = Debug.getInstance().setEnd();
-        System.assert(Debug.MESSAGE_END_METHOD.equals(debugInstance.informationalMessage));
+        System.assert(
+            Debug.MESSAGE_END_METHOD.equals(debugInstance.informationalMessage)
+        );
         debugInstance.cleanInstanceVariables();
-        System.assert(Debug.CHARACTER_EMPTY.equals(debugInstance.informationalMessage));
+        System.assert(
+            Debug.CHARACTER_EMPTY.equals(debugInstance.informationalMessage)
+        );
     }
 
     @isTest
-    static void setMinSplitLenghtTest()
-    {
+    static void setMinSplitLenghtTest() {
         Integer minSplitLenght = 10;
         Debug.getInstance().setMinSplitLenght(minSplitLenght);
         System.assertEquals(minSplitLenght, Debug.getInstance().minSplitLenght);
     }
 
     @isTest
-    static void setMaxSplitLenghtTest()
-    {
+    static void setMaxSplitLenghtTest() {
         Integer maxSplitLenght = 20;
         Debug.getInstance().setMaxSplitLenght(maxSplitLenght);
         System.assertEquals(maxSplitLenght, Debug.getInstance().maxSplitLenght);
     }
 
     @isTest
-    static void setCharacterSplitSignalTest()
-    {
+    static void setCharacterSplitSignalTest() {
         String splitSignal = '/';
-        Debug debugInstance = Debug.getInstance().setCharacterSplitSignal(splitSignal);
+        Debug debugInstance = Debug.getInstance()
+            .setCharacterSplitSignal(splitSignal);
         System.assert(splitSignal.equals(debugInstance.characterSplitSignal));
         debugInstance.cleanInstanceVariables();
-        System.assert(Debug.CHARACTER_SPLIT_SIGNAL.equals(debugInstance.characterSplitSignal));
+        System.assert(
+            Debug.CHARACTER_SPLIT_SIGNAL.equals(
+                debugInstance.characterSplitSignal
+            )
+        );
     }
 
     @isTest
-    static void cleanInstanceVariablesTest()
-    {
+    static void cleanInstanceVariablesTest() {
         String splitSignal = ';';
-        Debug debugInstance = Debug.getInstance().setStart().setCharacterSplitSignal(splitSignal);
+        Debug debugInstance = Debug.getInstance()
+            .setStart()
+            .setCharacterSplitSignal(splitSignal);
         System.assert(splitSignal.equals(debugInstance.characterSplitSignal));
-        System.assert(Debug.MESSAGE_START_METHOD.equals(debugInstance.informationalMessage));
+        System.assert(
+            Debug.MESSAGE_START_METHOD.equals(
+                debugInstance.informationalMessage
+            )
+        );
         debugInstance.cleanInstanceVariables();
-        System.assert(Debug.CHARACTER_SPLIT_SIGNAL.equals(debugInstance.characterSplitSignal));
-        System.assert(Debug.CHARACTER_EMPTY.equals(debugInstance.informationalMessage));
-        
+        System.assert(
+            Debug.CHARACTER_SPLIT_SIGNAL.equals(
+                debugInstance.characterSplitSignal
+            )
+        );
+        System.assert(
+            Debug.CHARACTER_EMPTY.equals(debugInstance.informationalMessage)
+        );
     }
 
     @isTest
-    static void getClassMethodNameLineTest()
-    {
+    static void getClassMethodNameLineTest() {
         String methodName = 'getClassMethodNameLineTest';
-        String classMethodNameLine = Debug.getInstance().getClassMethodNameLine();
+        String classMethodNameLine = Debug.getInstance()
+            .getClassMethodNameLine();
         System.assert(classMethodNameLine.contains(DebugTest.className));
         System.assert(classMethodNameLine.contains(methodName));
     }
 
     @isTest
-    static void getClassNameTest()
-    {
+    static void getClassNameTest() {
         String className = Debug.getInstance().getClassName();
         System.assert(DebugTest.className.equals(className));
     }
 
     @isTest
-    static void getMethodNameTest()
-    {
+    static void getMethodNameTest() {
         String methodNameStr = 'getMethodNameTest';
         String methodName = Debug.getInstance().getMethodName();
         System.assert(methodNameStr.equals(methodNameStr));
     }
 
     @isTest
-    static void getLineNumberTest()
-    {
+    static void getLineNumberTest() {
         /* lineNumberStr need be the line where the method 'Debug.getInstance().getLineNumber()' is called. */
-        String lineNumberStr = '110'; 
+        String lineNumberStr = '110';
         String lineNumber = Debug.getInstance().getLineNumber();
         System.assert(lineNumberStr.equals(lineNumber));
     }
 
-    @isTest 
-    static void getMessageTest()
-    {
+    @isTest
+    static void getMessageTest() {
         String className = 'className';
         String methodName = 'methodName';
         String lineNumber = '000';
         String bodyMessage = 'bodyMessage';
-        Debug debugInstance = Debug.getInstance(); 
-        String message = debugInstance.getMessage(className, methodName, lineNumber, bodyMessage);
+        Debug debugInstance = Debug.getInstance();
+        String message = debugInstance.getMessage(
+            className,
+            methodName,
+            lineNumber,
+            bodyMessage
+        );
         System.assert(message.contains(className));
         System.assert(message.contains(methodName));
         System.assert(message.contains(lineNumber));
@@ -127,23 +146,23 @@ class DebugTest {
     }
 
     @isTest
-    static void serializeLogTest()
-    {
+    static void serializeLogTest() {
         String methodName = 'serializeLogTest';
         String accountName = 'serializeLogTest Name';
-        Account record = new Account(Name=accountName);
-        String logMessage = Debug.getInstance().serializeLog().log('Account', record);
+        Account record = new Account(Name = accountName);
+        String logMessage = Debug.getInstance()
+            .serializeLog()
+            .log('Account', record);
         System.assert(logMessage.contains(DebugTest.className));
         System.assert(logMessage.contains(methodName));
         System.assert(logMessage.contains(accountName));
     }
 
     @isTest
-    static void setBreakLinesTest()
-    {
+    static void setBreakLinesTest() {
         String methodName = 'breakLinesTest';
         String accountName = 'breakLinesTest Name';
-        Account record = new Account(Name=accountName);
+        Account record = new Account(Name = accountName);
         String logMessage = Debug.getInstance()
             .setMinSplitLenght(30)
             .setMaxSplitLenght(50)
@@ -157,8 +176,7 @@ class DebugTest {
     }
 
     @isTest
-    static void logTest()
-    {
+    static void logTest() {
         String methodName = 'logTest';
         String logMessage = Debug.getInstance().log();
         System.assert(logMessage.contains(DebugTest.className));
@@ -166,8 +184,7 @@ class DebugTest {
     }
 
     @isTest
-    static void log2Test()
-    {
+    static void log2Test() {
         String methodName = 'log2Test';
         String key = 'key';
         String value = 'value';
@@ -179,50 +196,59 @@ class DebugTest {
     }
 
     @isTest
-    static void logExceptionTest()
-    {
-        try
-        {
+    static void logExceptionTest() {
+        try {
             throw new DebugTestException();
-        }
-        catch (DebugTestException e)
-        {
+        } catch (DebugTestException e) {
             String logMessage = Debug.getInstance().log(e);
-            System.assert(logMessage.contains(String.valueOf(DebugTestException.class)));
+            System.assert(
+                logMessage.contains(String.valueOf(DebugTestException.class))
+            );
         }
     }
 
     @isTest
-    static void getBodyMessageTest()
-    {
+    static void getBodyMessageTest() {
         Integer number1 = 1;
         Integer number2 = 2;
         String key = 'acc';
-        Id accountId = DebugTest.generateFakeId(Schema.Account.getSObjectType());
-        Account accountRecord = new Account(Id=accountId);
-        Map<Object, Object> toLogMap = new Map<Object, Object> { 1 => 2, key => accountRecord };
+        Id accountId = DebugTest.generateFakeId(
+            Schema.Account.getSObjectType()
+        );
+        Account accountRecord = new Account(Id = accountId);
+        Map<Object, Object> toLogMap = new Map<Object, Object>{
+            1 => 2,
+            key => accountRecord
+        };
         String bodyMessage = Debug.getInstance().getBodyMessage(toLogMap);
-        System.assert(bodyMessage.contains(String.valueOf(number1) + ' → ' + String.valueOf(number2)));
+        System.assert(
+            bodyMessage.contains(
+                String.valueOf(number1) + ' → ' + String.valueOf(number2)
+            )
+        );
         System.assert(bodyMessage.contains(key));
         System.assert(bodyMessage.contains(accountId));
     }
 
     @isTest
-    static void getKeyValueLineTest()
-    {
+    static void getKeyValueLineTest() {
         String key = 'key for test';
-        Id accountId = DebugTest.generateFakeId(Schema.Account.getSObjectType());
-        Account accountRecord = new Account(Id=accountId);
-        String sobjectName = accountRecord.getSobjectType().getDescribe().getName();
-        String keyValueLine = Debug.getInstance().getKeyValueLine(key, accountRecord);
+        Id accountId = DebugTest.generateFakeId(
+            Schema.Account.getSObjectType()
+        );
+        Account accountRecord = new Account(Id = accountId);
+        String sobjectName = accountRecord.getSobjectType()
+            .getDescribe()
+            .getName();
+        String keyValueLine = Debug.getInstance()
+            .getKeyValueLine(key, accountRecord);
         System.assert(keyValueLine.contains(key));
         System.assert(keyValueLine.contains(sobjectName));
         System.assert(keyValueLine.contains(accountId));
     }
 
     @isTest
-    static void validateMinAndMaxSplitSizeTest()
-    {
+    static void validateMinAndMaxSplitSizeTest() {
         Debug.getInstance().setMinSplitLenght(1);
         Debug.getInstance().setMaxSplitLenght(3);
         Boolean valid = Debug.getInstance().validateMinAndMaxSplitSize();
@@ -246,38 +272,45 @@ class DebugTest {
     }
 
     @isTest
-    static void setMinMaxSplitLenghtRegexTest()
-    {
+    static void setMinMaxSplitLenghtRegexTest() {
         String regex = Debug.getInstance().setMinMaxSplitLenghtRegex(10, 20);
         System.assert(regex.contains(String.valueOf(10)));
         System.assert(regex.contains(String.valueOf(20)));
     }
 
     @isTest
-    static void breakLinesTest()
-    {
+    static void breakLinesTest() {
         String treatText = 'text';
         String treatedText2 = Debug.getInstance().breakLines(treatText);
         System.assert(treatedText2.equals(treatText));
 
-        String bigText = ''.center(Debug.GREAT_SIZE_LINE_MIN, 'a') + ',' + ''.center(Debug.GREAT_SIZE_LINE_MIN, 'b') + ',oi';
+        String bigText =
+            ''.center(Debug.GREAT_SIZE_LINE_MIN, 'a') +
+            ',' +
+            ''.center(Debug.GREAT_SIZE_LINE_MIN, 'b') +
+            ',oi';
         String treatedText = Debug.getInstance().breakLines(bigText);
         System.assert(treatedText.contains(Debug.TITLE_BREAK_GREAT_LINES));
-        System.assert(treatedText.contains(Debug.CHARACTER_SPLIT_SIGNAL + Debug.CHARACTER_BREAK_LINE));
+        System.assert(
+            treatedText.contains(
+                Debug.CHARACTER_SPLIT_SIGNAL + Debug.CHARACTER_BREAK_LINE
+            )
+        );
 
-        List<String> textSplited = treatedText.split(Debug.CHARACTER_BREAK_LINE);
-        for(String text : textSplited)
-        {
+        List<String> textSplited = treatedText.split(
+            Debug.CHARACTER_BREAK_LINE
+        );
+        for (String text : textSplited) {
             System.assert(text.length() <= Debug.GREAT_SIZE_LINE_MAX);
         }
     }
 
     public static Id generateFakeId(Schema.SObjectType sobj) {
         Id fakeId = null;
-        if(sobj != null) {
+        if (sobj != null) {
             fakeId = String.format(
                 '{0}{1}{1}{2}',
-                new String[] {
+                new List<String>{
                     sobj.getDescribe().getKeyPrefix(),
                     '00',
                     String.valueOf(System.now().getTime()).substring(0, 8)
@@ -287,5 +320,6 @@ class DebugTest {
         return fakeId;
     }
 
-    class DebugTestException extends Exception {}
+    class DebugTestException extends Exception {
+    }
 }
